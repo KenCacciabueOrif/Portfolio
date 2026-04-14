@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website (MVP)
 
-## Getting Started
+Vitrine personnelle pour presenter mon profil Full Stack, mes projets, mes competences et mes liens professionnels.
 
-First, run the development server:
+## Objectif
+
+Mettre en ligne une vitrine personnelle fonctionnelle en 48h, afin qu'un recruteur comprenne en moins de 60 secondes:
+- qui je suis,
+- ce que je sais faire,
+- quels projets je construis.
+
+## Public cible
+
+- Recruteurs
+- Equipes IT
+- Entreprises
+
+## Perimetre MVP (IN)
+
+- Page Accueil
+- Section A propos
+- Section Projets (cartes avec statut "En cours")
+- Section Contact
+- Liens GitHub + LinkedIn
+- Version responsive mobile/desktop
+- Deploiement sur Vercel
+
+## Hors perimetre MVP (OUT)
+
+- Blog
+- Animations complexes
+- CMS
+- Multilingue (prevu plus tard)
+- Formulaire backend avance
+
+## Contenu minimum attendu
+
+- Navigation simple et responsive
+- Hero clair avec proposition de valeur
+- Section profil (presentation courte + stack)
+- Cartes projets avec badge "En cours"
+- Point d'entree unique vers GitHub, LinkedIn et demos
+
+## Stack cible
+
+- Frontend: Next.js + Tailwind CSS
+- Deploiement: Vercel
+- Evolution possible: API backend Node.js/Express ou Spring Boot
+
+## Criteres d'acceptation (Definition of Done)
+
+- Site en ligne avec URL publique
+- Les 4 sections MVP sont visibles et lisibles
+- Les liens GitHub/LinkedIn fonctionnent
+- Affichage correct mobile et desktop
+- Temps de chargement percu < 3 secondes
+
+## Roadmap projets (ordre fixe)
+
+1. Portfolio Website MVP
+2. Task Manager Collaboratif (projet phare)
+3. Expense Tracker Personnel
+4. URL Shortener & Analytics
+5. Notes App avec Tags & Search
+
+## Installation locale
+
+### Prerequis
+
+- Node.js LTS
+- npm
+
+### Demarrage
+
+```bash
+npm install
+npm run dev
+```
+
+Application locale: http://localhost:3000
+
+## Scripts utiles
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Convention de mise a jour
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Ajouter chaque projet des qu'il devient publiable
+- Remplacer le badge "En cours" par "Live" quand une demo est disponible
+- Mettre a jour les liens GitHub et demo en continu
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Auteur
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ken D. Cacciabue
