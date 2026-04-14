@@ -46,10 +46,10 @@ export default function RootLayout({
             <NavLinks />
           </div>
         </header>
-        <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-10 sm:px-8">
+        <main className="mx-auto w-full max-w-[23.5rem] flex-1 px-3 py-7 sm:max-w-6xl sm:px-8 sm:py-10">
           {children}
         </main>
-        <footer className="site-footer mx-auto w-full max-w-6xl px-5 pb-10 pt-2 text-sm sm:px-8">
+        <footer className="site-footer mx-auto w-full max-w-[23.5rem] px-3 pb-8 pt-2 text-sm sm:max-w-6xl sm:px-8 sm:pb-10">
           Ken D. Cacciabue - Portfolio et candidature stage
         </footer>
       </body>
