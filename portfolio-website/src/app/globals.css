@@ -34,6 +34,7 @@
       radial-gradient(circle at 5% 0%, color-mix(in oklab, var(--brand-4) 24%, transparent), transparent 36%),
       radial-gradient(circle at 95% 10%, color-mix(in oklab, var(--brand-5) 22%, transparent), transparent 34%),
       var(--background);
+    background-repeat: no-repeat;
     color: var(--foreground);
   }
 
@@ -56,6 +57,7 @@
 
 /* Style global applique a toute l'application. */
 body {
+  min-height: 100dvh;
   background:
     radial-gradient(circle at 5% 0%, color-mix(in oklab, var(--brand-4) 20%, transparent), transparent 35%),
     radial-gradient(circle at 95% 10%, color-mix(in oklab, var(--brand-5) 18%, transparent), transparent 32%),
@@ -65,7 +67,7 @@ body {
   font-family: var(--font-geist-sans), "Trebuchet MS", sans-serif;
 }
 
-.site-shell a {
+.site-shell a:not(.cta-primary):not(.cta-secondary):not(.nav-link):not(.brand-mark) {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
@@ -73,16 +75,11 @@ body {
   transition: opacity 160ms ease;
 }
 
-.site-shell a:hover {
+.site-shell a:not(.cta-primary):not(.cta-secondary):not(.nav-link):not(.brand-mark):hover {
   opacity: 0.78;
 }
 
-.site-shell a:focus-visible,
-.cta-primary:focus-visible,
-.cta-secondary:focus-visible,
-.nav-link:focus-visible,
-.brand-mark:focus-visible {
-  outline: 3px solid #4b8a99;
+.site-shell :is(a, button, select):focus-visible {
   outline: 3px solid color-mix(in oklab, var(--accent) 70%, white 30%);
   outline-offset: 3px;
   border-radius: 0.5rem;
@@ -118,7 +115,7 @@ body {
   border: 1px solid var(--line);
   background: var(--card);
   font-weight: 700;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -132,7 +129,7 @@ body {
   padding: 0.45rem 0.8rem;
   color: var(--foreground);
   font-size: 0.95rem;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -233,14 +230,14 @@ body {
 
 .cta-primary {
   background: var(--accent);
-  color: #fff8f4 !important;
-  text-decoration: none !important;
+  color: #fff8f4;
+  text-decoration: none;
 }
 
 .cta-secondary {
   border: 1px solid var(--line);
-  color: var(--foreground) !important;
-  text-decoration: none !important;
+  color: var(--foreground);
+  text-decoration: none;
 }
 
 .section-title {
@@ -303,5 +300,11 @@ body {
 
   .hero-panel {
     padding: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell a:not(.cta-primary):not(.cta-secondary):not(.nav-link):not(.brand-mark) {
+    transition: none;
   }
 }
