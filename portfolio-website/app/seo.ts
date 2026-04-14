@@ -1,3 +1,5 @@
+// Purpose: Utilitaires SEO partages; centralise l'URL canonique et la generation de metadata.
+// Exports: `siteUrl` et `createPageMetadata` pour harmoniser Open Graph/Twitter par page.
 import type { Metadata } from "next";
 
 export const siteUrl =

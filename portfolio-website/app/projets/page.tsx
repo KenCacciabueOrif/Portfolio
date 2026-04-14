@@ -1,3 +1,5 @@
+// Purpose: Page /projets; presente la roadmap complete a partir des donnees centralisees.
+// Exports: `metadata` (SEO de la route) et `ProjectsPage` (composant de page serveur).
 import type { Metadata } from "next";
 import { ProjectCard } from "../components/project-card";
 import { createPageMetadata } from "../seo";

@@ -1,3 +1,5 @@
+/* Purpose: Feuille de styles globale; definit tokens, layout, composants UI et responsive. */
+/* Sections: variables CSS, pont Tailwind v4, navigation, hero/info panels, cartes projets. */
 @import "tailwindcss";
 
 /* Variables CSS par defaut pour le theme clair. */

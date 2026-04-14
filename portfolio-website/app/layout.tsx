@@ -1,3 +1,5 @@
+// Purpose: Layout racine App Router; applique polices, structure globale et metadata par defaut.
+// Exports: `metadata` (base SEO globale) et `RootLayout` (enveloppe commune de toutes les routes).
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";

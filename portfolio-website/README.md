@@ -1,3 +1,4 @@
+<!-- Purpose: Documentation projet; explique objectifs MVP, stack, scripts et workflow de mise a jour. -->
 # Portfolio Website (MVP)
 
 Vitrine personnelle pour presenter mon profil Full Stack, mes projets, mes competences et mes liens professionnels.

@@ -1,3 +1,5 @@
+// Purpose: Route metadata sitemap; genere automatiquement la liste des URLs indexables.
+// Exports: `sitemap`, fonction qui retourne les entrees XML avec priorites et frequences.
 import type { MetadataRoute } from "next";
 import { siteUrl } from "./seo";
 

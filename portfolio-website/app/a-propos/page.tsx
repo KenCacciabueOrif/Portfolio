@@ -1,3 +1,5 @@
+// Purpose: Page /a-propos; affiche le profil, la stack et les cibles de stage.
+// Exports: `metadata` (SEO de la route) et `AboutPage` (composant de page serveur).
 import type { Metadata } from "next";
 import { createPageMetadata } from "../seo";
 import { socialLinks } from "../site-content";

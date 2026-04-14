@@ -1,3 +1,5 @@
+// Purpose: Page d'accueil; combine hero, apercu de projets et liens de contact rapides.
+// Exports: `metadata` (SEO de la route /) et `Home` (composant de page serveur).
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ProjectCard } from "./components/project-card";

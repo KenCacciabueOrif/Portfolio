@@ -1,3 +1,5 @@
+// Purpose: Navigation principale cote client; gere le lien actif selon la route courante.
+// Exports: `NavLinks`, composant qui mappe `navLinks` et renseigne `aria-current`.
 "use client";
 
 import Link from "next/link";

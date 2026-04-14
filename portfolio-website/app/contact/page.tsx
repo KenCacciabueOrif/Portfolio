@@ -1,3 +1,5 @@
+// Purpose: Page /contact; centralise les coordonnees et points d'entree professionnels.
+// Exports: `metadata` (SEO de la route) et `ContactPage` (composant de page serveur).
 import type { Metadata } from "next";
 import { createPageMetadata } from "../seo";
 import { contactInfo, socialLinks } from "../site-content";

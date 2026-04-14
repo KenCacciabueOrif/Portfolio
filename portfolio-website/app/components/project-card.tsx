@@ -1,3 +1,5 @@
+// Purpose: Composant de carte projet reutilisable pour l'accueil et la page projets.
+// Exports: `ProjectCard`, qui rend le titre, le statut, le resume et la stack technique.
 import type { ProjectCard as ProjectCardType } from "../site-content";
 
 type ProjectCardProps = {

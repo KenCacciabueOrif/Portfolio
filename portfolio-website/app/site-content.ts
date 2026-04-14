@@ -1,3 +1,5 @@
+// Purpose: Source de verite du contenu du site (navigation, contact, liens sociaux, projets).
+// Exports: types (`NavLink`, `ProjectCard`) et constantes consommees par les pages/composants.
 export type NavLink = {
   href: string;
   label: string;
