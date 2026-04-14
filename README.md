@@ -1,35 +1,26 @@
-﻿# Portfolio Website (MVP)
+﻿# Portfolio - Vision et Pilotage
 
-Vitrine personnelle pour presenter mon profil Full Stack, mes projets, mes competences et mes liens professionnels.
+Ce README decrit le portfolio au niveau produit: vision, priorites, contenus attendus et ordre des projets.
 
-## Objectif
+Le README technique de l'application web se trouve dans:
+`portfolio-website/README.md`
 
-Ce projet correspond a la phase 1 du plan portfolio:
-- Mettre rapidement en ligne une vitrine fonctionnelle
-- Presenter les projets avec un statut clair (En cours / Live)
-- Donner un point d'entree unique vers GitHub, LinkedIn et les demos
+## Role de ce dossier
 
-## Pages MVP
+- Definir le cadre global du portfolio
+- Garder une roadmap stable des projets a publier
+- Centraliser les objectifs metier et les livrables
 
-- Accueil
-- A propos
-- Projets
-- Contact
+## Objectif global
 
-## Contenu minimum de la version MVP
+Construire un portfolio qui permet a un recruteur de comprendre rapidement:
+- le profil,
+- les competences,
+- les projets realises et leur maturite.
 
-- Navigation simple et responsive (desktop/mobile)
-- Hero clair avec proposition de valeur
-- Section profil (presentation courte + stack)
-- Cartes projets avec badge En cours
-- Liens externes: GitHub + LinkedIn
-- Formulaire ou section de contact
+## Livrable principal
 
-## Stack cible
-
-- Frontend: Next.js + Tailwind CSS
-- Deploiement: Vercel
-- Evolution possible: API backend (Node.js/Express ou Spring Boot)
+- Une vitrine web publiee (MVP) accessible publiquement
 
 ## Roadmap projets (ordre fixe)
 
@@ -66,37 +57,21 @@ Ce projet correspond a la phase 1 du plan portfolio:
 - Edition Markdown + preview
 - Objectif: UX contenu + recherche
 
-## Planning de lancement (MVP)
+## Planning de lancement MVP
 
 ### Semaine 0 (2 jours)
 - Jour 1: structure pages, navigation, design de base
-- Jour 2: integration contenu initial et deploiement Vercel
+- Jour 2: integration contenu initial et deploiement
 
-## Livrables attendus
-
-- Repo GitHub propre
-- URL publique de la vitrine
-- README maintenu a jour
-- Cartes projets reliees aux repos/demos au fur et a mesure
-
-## Installation locale
-
-### Prerequis
-- Node.js LTS
-- npm
-
-### Demarrage (si projet Next.js deja initialise)
-
-```bash
-npm install
-npm run dev
-```
-
-## Convention de mise a jour du portfolio
+## Gouvernance de mise a jour
 
 - Ajouter chaque projet des qu'il devient publiable
 - Remplacer le badge En cours par Live des qu'une demo est disponible
 - Mettre a jour les liens GitHub et demo en continu
+
+## Liens utiles
+
+- README technique de l'app web: `portfolio-website/README.md`
 
 ## Auteur
 

@@ -1,54 +1,20 @@
 <!-- Purpose: Documentation projet; explique objectifs MVP, stack, scripts et workflow de mise a jour. -->
-# Portfolio Website (MVP)
+# Portfolio Website - Guide Technique
 
-Vitrine personnelle pour presenter mon profil Full Stack, mes projets, mes competences et mes liens professionnels.
+Ce README couvre uniquement l'application web dans ce dossier: architecture, lancement local, scripts, build et deploiement.
 
-## Objectif
+Pour la vision produit et la roadmap globale du portfolio, voir:
+`../README.md`
 
-Mettre en ligne une vitrine personnelle fonctionnelle en 48h, afin qu'un recruteur comprenne en moins de 60 secondes:
-- qui je suis,
-- ce que je sais faire,
-- quels projets je construis.
+## Stack
 
-## Public cible
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- ESLint
 
-- Recruteurs
-- Equipes IT
-- Entreprises
-
-## Perimetre MVP (IN)
-
-- Page Accueil
-- Section A propos
-- Section Projets (cartes avec statut "En cours")
-- Section Contact
-- Liens GitHub + LinkedIn
-- Version responsive mobile/desktop
-- Deploiement sur Vercel
-
-## Hors perimetre MVP (OUT)
-
-- Blog
-- Animations complexes
-- CMS
-- Multilingue (prevu plus tard)
-- Formulaire backend avance
-
-## Contenu minimum attendu
-
-- Navigation simple et responsive
-- Hero clair avec proposition de valeur
-- Section profil (presentation courte + stack)
-- Cartes projets avec badge "En cours"
-- Point d'entree unique vers GitHub, LinkedIn et demos
-
-## Stack cible
-
-- Frontend: Next.js + Tailwind CSS
-- Deploiement: Vercel
-- Evolution possible: API backend Node.js/Express ou Spring Boot
-
-## Organisation du projet
+## Architecture
 
 Le code source est isole dans `src/`.
 
@@ -76,21 +42,12 @@ Regles simples:
 - Preferer les imports absolus via alias `@/src/...`
 - Pour une nouvelle section de page, creer d'abord un composant dans `src/components/sections/`
 
-## Criteres d'acceptation (Definition of Done)
+## Criteres techniques de validation
 
-- Site en ligne avec URL publique
-- Les 4 sections MVP sont visibles et lisibles
-- Les liens GitHub/LinkedIn fonctionnent
-- Affichage correct mobile et desktop
-- Temps de chargement percu < 3 secondes
-
-## Roadmap projets (ordre fixe)
-
-1. Portfolio Website MVP
-2. Task Manager Collaboratif (projet phare)
-3. Expense Tracker Personnel
-4. URL Shortener & Analytics
-5. Notes App avec Tags & Search
+- Le projet compile sans erreur (`npm run build`)
+- Le lint passe (`npm run lint`)
+- L'application demarre localement (`npm run dev`)
+- L'affichage reste lisible en mobile et desktop
 
 ## Installation locale
 
@@ -108,6 +65,25 @@ npm run dev
 
 Application locale: http://localhost:3000
 
+## Build production
+
+```bash
+npm run build
+npm run start
+```
+
+## Deploiement
+
+Deploiement cible: Vercel.
+
+Workflow recommande:
+
+1. Push sur la branche de travail
+2. Verification lint/build en CI
+3. Deploy preview
+4. Validation visuelle
+5. Promotion en production
+
 ## Scripts utiles
 
 ```bash
@@ -117,11 +93,11 @@ npm run build
 npm run start
 ```
 
-## Convention de mise a jour
+## Maintenance
 
-- Ajouter chaque projet des qu'il devient publiable
-- Remplacer le badge "En cours" par "Live" quand une demo est disponible
-- Mettre a jour les liens GitHub et demo en continu
+- Garder les dependances a jour
+- Ajouter les nouveaux composants dans les dossiers de domaine adequats
+- Eviter les contenus en dur dans les pages, preferer `src/content/`
 
 ## Auteur
 
