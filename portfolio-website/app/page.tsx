@@ -1,18 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { projects, socialLinks } from "./site-content";
+import { ProjectCard } from "./components/project-card";
+import { createPageMetadata } from "./seo";
+import { contactInfo, projects, socialLinks } from "./site-content";
+
+// Metadonnees SEO specifiques a la page d'accueil (fusionnees avec celles du layout).
+export const metadata: Metadata = createPageMetadata({
+  title: "Accueil | Portfolio - Ken D. Cacciabue",
+  description:
+    "Developpeur full stack junior: profil, projets en cours et contact pour stage developpement logiciel.",
+});
 
 export default function Home() {
   return (
     // Page d'accueil composee de 3 blocs: hero, apercu projets et liens rapides.
     <div className="space-y-10">
       <section className="hero-panel">
-        <p className="eyebrow">Developpeur Full Stack</p>
+        <p className="eyebrow">Ken D. Cacciabue</p>
         <h1 className="hero-title">
-          Je construis des applications web claires, utiles et deployables.
+          Developpeur full stack junior
         </h1>
         <p className="hero-copy">
-          Vitrine MVP pour presenter mon profil, mes projets en cours et mes
-          objectifs de progression.
+          Je contribue a des projets web et API concrets avec une approche
+          orientee qualite, fiabilite et amelioration continue. Stack principale:
+          Next.js, TypeScript, Spring Boot, Node.js et PostgreSQL.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link href="/projets" className="cta-primary">
@@ -26,15 +37,9 @@ export default function Home() {
 
       <section className="grid gap-4 sm:grid-cols-2">
         {/* L'accueil affiche seulement les 2 premiers projets pour garder une lecture rapide. */}
+        {/* Les cartes partagent le meme composant que /projets pour maintenir une UX coherente. */}
         {projects.slice(0, 2).map((project) => (
-          <article key={project.title} className="project-card">
-            <div className="project-card-top">
-              <h2 className="project-title">{project.title}</h2>
-              <span className="status-pill">{project.status}</span>
-            </div>
-            <p className="project-summary">{project.summary}</p>
-            <p className="project-stack">{project.stack}</p>
-          </article>
+          <ProjectCard key={project.title} project={project} />
         ))}
       </section>
 
@@ -48,6 +53,7 @@ export default function Home() {
           <a href={socialLinks.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
+          <a href={`mailto:${contactInfo.email}`}>Email direct</a>
         </div>
       </section>
     </div>

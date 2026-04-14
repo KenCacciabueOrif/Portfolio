@@ -1,4 +1,13 @@
-import { socialLinks } from "../site-content";
+import type { Metadata } from "next";
+import { createPageMetadata } from "../seo";
+import { contactInfo, socialLinks } from "../site-content";
+
+// SEO dedie a /contact pour cibler les requetes de prise de contact/candidature.
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact | Portfolio - Ken D. Cacciabue",
+  description:
+    "Contact stage developpement logiciel: email, telephone, localisation et liens professionnels.",
+});
 
 export default function ContactPage() {
   return (
@@ -6,10 +15,10 @@ export default function ContactPage() {
     <div className="space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">Contact</p>
-        <h1 className="hero-title">Discutons de votre projet</h1>
+        <h1 className="hero-title">Candidature stage developpement logiciel</h1>
         <p className="hero-copy">
-          Disponible pour des echanges autour de developpement web full stack,
-          integrations API et mise en production.
+          Je recherche un stage pour contribuer sur des sujets web full stack,
+          API backend, interactivite et architecture logicielle.
         </p>
       </section>
 
@@ -17,13 +26,19 @@ export default function ContactPage() {
         {/* Informations de contact directes visibles sans interaction. */}
         <h2 className="section-title">Me joindre</h2>
         <ul className="stack-list">
-          <li>Email: kencacciabue@outlook.com</li>
-          <li>Localisation: Ste-Croix, Suisse</li>
-          <li>Disponibilite: missions junior full stack</li>
+          <li>
+            Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+          </li>
+          <li>
+            Telephone: <a href={`tel:${contactInfo.phone}`}>+41 79 721 69 23</a>
+          </li>
+          <li>Localisation: {contactInfo.location}</li>
+          <li>Disponibilite: {contactInfo.availability}</li>
         </ul>
       </section>
 
       <section className="info-panel">
+        {/* Les liens externes restent centralises dans site-content.ts. */}
         {/* Regroupe les canaux professionnels pour simplifier la prise de contact. */}
         <h2 className="section-title">Liens professionnels</h2>
         <div className="flex flex-wrap gap-3">
@@ -33,7 +48,7 @@ export default function ContactPage() {
           <a href={socialLinks.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
-          <a href="mailto:kencacciabue@outlook.com">Envoyer un email</a>
+          <a href={`mailto:${contactInfo.email}`}>Envoyer un email</a>
         </div>
       </section>
     </div>

@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
+import { ProjectCard } from "../components/project-card";
+import { createPageMetadata } from "../seo";
 import { projects } from "../site-content";
+
+// SEO dedie a /projets pour renforcer la visibilite de la roadmap technique.
+export const metadata: Metadata = createPageMetadata({
+  title: "Projets | Portfolio - Ken D. Cacciabue",
+  description:
+    "Roadmap des projets 2026: Task Manager, Expense Tracker, URL Shortener et Notes App.",
+});
 
 export default function ProjectsPage() {
   return (
@@ -15,15 +25,9 @@ export default function ProjectsPage() {
 
       <section className="grid gap-4 sm:grid-cols-2">
         {/* Ici, pas de slice: on affiche chaque entree pour presenter la feuille de route complete. */}
+        {/* Le rendu est 100% data-driven: ajouter un projet dans site-content suffit. */}
         {projects.map((project) => (
-          <article key={project.title} className="project-card">
-            <div className="project-card-top">
-              <h2 className="project-title">{project.title}</h2>
-              <span className="status-pill">{project.status}</span>
-            </div>
-            <p className="project-summary">{project.summary}</p>
-            <p className="project-stack">{project.stack}</p>
-          </article>
+          <ProjectCard key={project.title} project={project} />
         ))}
       </section>
     </div>

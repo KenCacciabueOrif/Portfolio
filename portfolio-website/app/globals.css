@@ -30,12 +30,24 @@ body {
 
 .site-shell a {
   color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
   transition: opacity 160ms ease;
 }
 
 .site-shell a:hover {
   opacity: 0.78;
+}
+
+.site-shell a:focus-visible,
+.cta-primary:focus-visible,
+.cta-secondary:focus-visible,
+.nav-link:focus-visible,
+.brand-mark:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent) 70%, white 30%);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
 }
 
 .top-nav-wrap {
@@ -67,6 +79,7 @@ body {
   border: 1px solid var(--line);
   background: var(--card);
   font-weight: 700;
+  text-decoration: none !important;
 }
 
 .nav-links {
@@ -80,10 +93,16 @@ body {
   padding: 0.45rem 0.8rem;
   color: var(--foreground);
   font-size: 0.95rem;
+  text-decoration: none !important;
 }
 
 .nav-link:hover {
   background: rgba(16, 32, 41, 0.06);
+}
+
+.nav-link[aria-current="page"] {
+  background: rgba(16, 32, 41, 0.1);
+  font-weight: 700;
 }
 
 .hero-panel,
@@ -135,11 +154,13 @@ body {
 .cta-primary {
   background: var(--accent);
   color: #fff8f4 !important;
+  text-decoration: none !important;
 }
 
 .cta-secondary {
   border: 1px solid var(--line);
   color: var(--foreground) !important;
+  text-decoration: none !important;
 }
 
 .section-title {
