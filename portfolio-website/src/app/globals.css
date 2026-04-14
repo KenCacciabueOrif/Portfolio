@@ -4,12 +4,46 @@
 
 /* Variables CSS par defaut pour le theme clair. */
 :root {
-  --background: #f7f4ef;
-  --foreground: #102029;
-  --card: #fffdfa;
-  --line: #d6c8b5;
-  --accent: #0c6478;
-  --accent-2: #a63f29;
+  color-scheme: light dark;
+  --brand-1: #003cf0;
+  --brand-2: #5e00f0;
+  --brand-3: #1100f0;
+  --brand-4: #0088f0;
+  --brand-5: #ad00f0;
+  --background: #f5f8ff;
+  --foreground: #101a5c;
+  --card: #ffffff;
+  --line: color-mix(in oklab, var(--brand-1) 22%, white 78%);
+  --accent: var(--brand-1);
+  --accent-2: var(--brand-5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: #090e24;
+    --foreground: #e8edff;
+    --card: #10183a;
+    --line: color-mix(in oklab, var(--brand-4) 36%, #000 64%);
+    --accent: var(--brand-4);
+    --accent-2: var(--brand-5);
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 5% 0%, color-mix(in oklab, var(--brand-4) 24%, transparent), transparent 36%),
+      radial-gradient(circle at 95% 10%, color-mix(in oklab, var(--brand-5) 22%, transparent), transparent 34%),
+      var(--background);
+    color: var(--foreground);
+  }
+
+  .top-nav-wrap {
+    background: color-mix(in oklab, var(--background) 88%, black 12%);
+  }
+
+  .site-footer {
+    color: color-mix(in oklab, var(--foreground) 74%, var(--background) 26%);
+  }
 }
 
 /* Pont entre variables CSS et tokens utilises par Tailwind v4. */
@@ -23,9 +57,10 @@
 /* Style global applique a toute l'application. */
 body {
   background:
-    radial-gradient(circle at 5% 0%, rgba(12, 100, 120, 0.1), transparent 35%),
-    radial-gradient(circle at 95% 10%, rgba(207, 79, 51, 0.14), transparent 32%),
+    radial-gradient(circle at 5% 0%, color-mix(in oklab, var(--brand-4) 20%, transparent), transparent 35%),
+    radial-gradient(circle at 95% 10%, color-mix(in oklab, var(--brand-5) 18%, transparent), transparent 32%),
     var(--background);
+  background-repeat: no-repeat;
   color: var(--foreground);
   font-family: var(--font-geist-sans), "Trebuchet MS", sans-serif;
 }
@@ -101,11 +136,11 @@ body {
 }
 
 .nav-link:hover {
-  background: rgba(16, 32, 41, 0.06);
+  background: color-mix(in oklab, var(--accent) 10%, transparent);
 }
 
 .nav-link[aria-current="page"] {
-  background: rgba(16, 32, 41, 0.1);
+  background: color-mix(in oklab, var(--accent) 16%, transparent);
   font-weight: 700;
 }
 
@@ -116,8 +151,8 @@ body {
   border: 1px solid var(--line);
   background: var(--card);
   box-shadow:
-    0 1px 0 rgba(16, 32, 41, 0.08),
-    0 8px 20px rgba(16, 32, 41, 0.04);
+    0 1px 0 color-mix(in oklab, var(--brand-3) 14%, transparent),
+    0 8px 20px color-mix(in oklab, var(--brand-1) 9%, transparent);
 }
 
 .hero-panel {
@@ -133,12 +168,17 @@ body {
   border-radius: 1rem;
   border: 1px solid color-mix(in oklab, var(--line) 84%, var(--accent) 16%);
   background:
-    linear-gradient(180deg, rgba(12, 100, 120, 0.035), rgba(12, 100, 120, 0.01) 35%, transparent),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--brand-4) 10%, transparent),
+      color-mix(in oklab, var(--brand-2) 4%, transparent) 35%,
+      transparent
+    ),
     var(--card);
   padding: 1rem;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    0 6px 16px rgba(16, 32, 41, 0.04);
+    0 6px 16px color-mix(in oklab, var(--brand-1) 8%, transparent);
 }
 
 .section-content-grid {
@@ -178,7 +218,7 @@ body {
   max-width: 62ch;
   margin-top: 0.9rem;
   margin-bottom: 1.15rem;
-  color: #35515b;
+  color: color-mix(in oklab, var(--foreground) 78%, var(--brand-1) 22%);
 }
 
 .cta-primary,
@@ -216,7 +256,7 @@ body {
 .stack-list {
   display: grid;
   gap: 0.5rem;
-  color: #28454f;
+  color: color-mix(in oklab, var(--foreground) 74%, var(--brand-2) 26%);
 }
 
 .project-card {
@@ -238,7 +278,7 @@ body {
 .status-pill {
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(207, 79, 51, 0.08);
+  background: color-mix(in oklab, var(--brand-5) 12%, transparent);
   color: var(--accent-2);
   padding: 0.2rem 0.65rem;
   font-size: 0.76rem;
@@ -247,13 +287,13 @@ body {
 
 .project-summary {
   margin-top: 0.45rem;
-  color: #35515b;
+  color: color-mix(in oklab, var(--foreground) 78%, var(--brand-1) 22%);
 }
 
 .project-stack {
   margin-top: 0.7rem;
   font-size: 0.86rem;
-  color: #48626c;
+  color: color-mix(in oklab, var(--foreground) 70%, var(--brand-2) 30%);
 }
 
 @media (max-width: 640px) {
