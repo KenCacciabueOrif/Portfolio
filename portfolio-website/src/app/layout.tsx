@@ -33,7 +33,7 @@ export default function RootLayout({
     // Layout racine App Router: enveloppe commune de toutes les routes.
     <html
       lang="fr"
-      className={`${geistSans.variable} h-full antialiased`}
+      className={`${geistSans.variable} h-full`}
     >
       {/* Le body utilise flex colonne pour permettre aux pages de prendre toute la hauteur. */}
       <body className="site-shell min-h-full flex flex-col">
