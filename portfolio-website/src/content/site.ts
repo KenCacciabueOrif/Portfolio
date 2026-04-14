@@ -5,6 +5,27 @@ export type NavLink = {
   label: string;
 };
 
+export type CvSkillGroup = {
+  label: string;
+  items: string[];
+};
+
+export type ProfessionalExperience = {
+  period: string;
+  organization: string;
+  role: string;
+  highlights: string[];
+};
+
+export type PastProject = {
+  title: string;
+  period: string;
+  context: string;
+  contribution: string;
+  stack: string;
+  source: "CV" | "Lettre de motivation";
+};
+
 export type ProjectCard = {
   title: string;
   summary: string;
@@ -33,6 +54,135 @@ export const contactInfo = {
   location: "Ste-Croix, Suisse",
   availability: "stage dev logiciel (full stack / API)",
 };
+
+export const cvIdentity = {
+  name: "Ken D. Cacciabue",
+  role: "Developpeur Full Stack Junior",
+  objective:
+    "Contribuer a des projets web et API concrets avec un impact mesurable pour les utilisateurs et l'organisation.",
+  profile: [
+    "Approche pragmatique: qualite du code, collaboration d'equipe et amelioration continue.",
+    "Polyvalence full stack: frontend, backend/API, data et deploiement.",
+    "Motivation forte pour construire des produits utiles, lisibles et fiables.",
+  ],
+};
+
+export const cvSkillGroups: CvSkillGroup[] = [
+  {
+    label: "Web et frontend",
+    items: ["React.js", "Next.js", "TypeScript"],
+  },
+  {
+    label: "Backend et API",
+    items: ["Java Spring Boot", "Node.js", "Express.js"],
+  },
+  {
+    label: "Data",
+    items: ["PostgreSQL", "MySQL", "PL/SQL", "MongoDB", "Neo4j"],
+  },
+  {
+    label: "Outils et deploiement",
+    items: ["Git", "Docker", "Python", "Vercel", "Shell/PowerShell"],
+  },
+  {
+    label: "Complementaires",
+    items: ["C#", "Godot (bases)", "Blender (bases)", "Cisco (bases)"],
+  },
+];
+
+export const credentials = {
+  education: [
+    "2025-present: CFC Informaticien en developpement d'applications (Orif Pomy)",
+    "2020-2023: HEG Geneve, informatique de gestion",
+    "2023: CPNV Ste-Croix, mediamatique",
+  ],
+  languages: [
+    "Francais: natif",
+    "Anglais: B2",
+    "Italien: maturite italienne (formation secondaire italienne)",
+  ],
+  references: [
+    "Attila Kruezsely - Attila.Kruezsely@orif.ch",
+    "Didier Viret - Didier.Viret@orif.ch",
+    "Raphael Schmutz - Raphael.Schmutz@orif.ch",
+  ],
+};
+
+export const professionalExperiences: ProfessionalExperience[] = [
+  {
+    period: "2024-present",
+    organization: "Orif Pomy",
+    role: "Developpement d'applications (formation CFC)",
+    highlights: [
+      "Developpement full stack sur des projets web et API en contexte reel.",
+      "Conception API, modelisation de donnees, documentation technique et deploiement.",
+      "Application des bonnes pratiques: architecture, lisibilite, testabilite et maintenance.",
+    ],
+  },
+  {
+    period: "2020-2022",
+    organization: "Junior Entreprise HEG Geneve (benevolat)",
+    role: "Membre IT",
+    highlights: [
+      "Refonte du site internet sous WordPress.",
+      "Aide au transfert de serveur.",
+      "Participation aux entretiens de nouveaux candidats IT.",
+    ],
+  },
+];
+
+export const pastProjects: PastProject[] = [
+  {
+    title: "Simpl.",
+    period: "Orif Pomy - 2024-present",
+    context:
+      "Reseau social de partage de posts textuels avec tri par proximite geographique et moderation communautaire.",
+    contribution:
+      "Developpement de l'application full stack, structuration technique et deploiement.",
+    stack: "Next.js, TypeScript, PostgreSQL, Prisma, Vercel, Git",
+    source: "CV",
+  },
+  {
+    title: "Template d'API + API d'authentification",
+    period: "Orif Pomy - 2024-present",
+    context:
+      "Creation d'un template reutilisable pour accelerer les futurs projets et d'une API d'authentification complete.",
+    contribution:
+      "Developpement API, gestion des profils, integration Azure AD et documentation REST automatisee.",
+    stack: "Java Spring Boot, Maven, Docker, Git",
+    source: "CV",
+  },
+  {
+    title: "HTTP Battles",
+    period: "Orif Pomy - 2024-present",
+    context:
+      "Projet formatif de bataille navale pilotee par requetes HTTP.",
+    contribution:
+      "Conception API, creation base de donnees et logique orientee gameplay.",
+    stack: "React.js, Express.js, MongoDB, Mongoose, Git",
+    source: "CV",
+  },
+  {
+    title: "Prototypage interactif personnel",
+    period: "Projets personnels",
+    context:
+      "Experimentation de mecaniques interactives et iteration rapide sur des prototypes.",
+    contribution:
+      "Prototypage avec Godot/Blender et renforcement logique gameplay via modding C#.",
+    stack: "Godot (bases), Blender (bases), C#",
+    source: "Lettre de motivation",
+  },
+  {
+    title: "Refonte site Junior Entreprise HEG",
+    period: "HEG Geneve - 2020-2022",
+    context:
+      "Contribution benevole a l'activite IT de la Junior Entreprise.",
+    contribution:
+      "Refonte WordPress et participation a la transition serveur.",
+    stack: "WordPress, administration web",
+    source: "CV",
+  },
+];
 
 // Chaque objet alimente les composants de cartes (page d'accueil + page projets).
 // Donnees des cartes projets reutilisees sur l'accueil (extrait) et la page projets (liste complete).
