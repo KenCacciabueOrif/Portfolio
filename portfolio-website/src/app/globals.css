@@ -16,6 +16,7 @@
   --line: color-mix(in oklab, var(--brand-1) 22%, white 78%);
   --accent: var(--brand-1);
   --accent-2: var(--brand-5);
+  --muted: color-mix(in oklab, var(--foreground) 74%, white 26%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +28,7 @@
     --line: color-mix(in oklab, var(--brand-4) 36%, #000 64%);
     --accent: var(--brand-4);
     --accent-2: var(--brand-5);
+    --muted: color-mix(in oklab, var(--foreground) 84%, #9fb5ff 16%);
   }
 
   body {
@@ -65,6 +67,7 @@ body {
   background-repeat: no-repeat;
   color: var(--foreground);
   font-family: var(--font-geist-sans), "Trebuchet MS", sans-serif;
+  line-height: 1.55;
 }
 
 .site-shell a:not(.cta-primary):not(.cta-secondary):not(.nav-link):not(.brand-mark) {
@@ -154,6 +157,10 @@ body {
 
 .hero-panel {
   padding: 1.5rem;
+  background:
+    radial-gradient(circle at 10% 0%, color-mix(in oklab, var(--brand-4) 14%, transparent), transparent 38%),
+    linear-gradient(145deg, color-mix(in oklab, var(--card) 96%, var(--brand-1) 4%), var(--card) 60%),
+    var(--card);
 }
 
 .section-block {
@@ -176,12 +183,21 @@ body {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     0 6px 16px color-mix(in oklab, var(--brand-1) 8%, transparent);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.section-box:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--line) 70%, var(--accent) 30%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 10px 26px color-mix(in oklab, var(--brand-1) 12%, transparent);
 }
 
 .section-content-grid {
   display: grid;
-  gap: 0.7rem;
-  margin-top: 0.75rem;
+  gap: 0.85rem;
+  margin-top: 0.95rem;
 }
 
 .section-intro {
@@ -191,7 +207,7 @@ body {
 .sub-panel {
   border-radius: 0.8rem;
   border: 1px solid color-mix(in oklab, var(--line) 88%, white 12%);
-  background: color-mix(in oklab, var(--card) 95%, white 5%);
+  background: color-mix(in oklab, var(--card) 94%, white 6%);
   padding: 0.85rem;
 }
 
@@ -215,7 +231,7 @@ body {
   max-width: 62ch;
   margin-top: 0.9rem;
   margin-bottom: 1.15rem;
-  color: color-mix(in oklab, var(--foreground) 78%, var(--brand-1) 22%);
+  color: var(--muted);
 }
 
 .cta-primary,
@@ -232,6 +248,7 @@ body {
   background: var(--accent);
   color: #fff8f4;
   text-decoration: none;
+  box-shadow: 0 8px 18px color-mix(in oklab, var(--accent) 34%, transparent);
 }
 
 .cta-secondary {
@@ -240,10 +257,20 @@ body {
   text-decoration: none;
 }
 
+.cta-primary:hover,
+.cta-secondary:hover {
+  transform: translateY(-1px);
+}
+
 .section-title {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.1rem, 1rem + 0.35vw, 1.28rem);
   font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.section-heading {
+  animation: rise-in 420ms ease both;
 }
 
 .info-panel {
@@ -253,12 +280,21 @@ body {
 .stack-list {
   display: grid;
   gap: 0.5rem;
-  color: color-mix(in oklab, var(--foreground) 74%, var(--brand-2) 26%);
+  color: var(--muted);
 }
 
 .project-card {
   padding: 1rem;
   background: color-mix(in oklab, var(--card) 92%, #ffffff 8%);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--line) 66%, var(--accent) 34%);
+  box-shadow:
+    0 2px 0 color-mix(in oklab, var(--brand-3) 18%, transparent),
+    0 14px 30px color-mix(in oklab, var(--brand-1) 16%, transparent);
 }
 
 .project-card-top {
@@ -274,23 +310,43 @@ body {
 
 .status-pill {
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background: color-mix(in oklab, var(--brand-5) 12%, transparent);
-  color: var(--accent-2);
+  border: 1px solid color-mix(in oklab, var(--accent-2) 55%, var(--line) 45%);
+  background: color-mix(in oklab, var(--accent-2) 18%, transparent);
+  color: color-mix(in oklab, var(--accent-2) 86%, white 14%);
   padding: 0.2rem 0.65rem;
   font-size: 0.76rem;
   font-weight: 700;
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, white 20%, transparent);
 }
 
 .project-summary {
   margin-top: 0.45rem;
-  color: color-mix(in oklab, var(--foreground) 78%, var(--brand-1) 22%);
+  color: var(--muted);
 }
 
 .project-stack {
   margin-top: 0.7rem;
   font-size: 0.86rem;
-  color: color-mix(in oklab, var(--foreground) 70%, var(--brand-2) 30%);
+  color: color-mix(in oklab, var(--foreground) 80%, var(--brand-2) 20%);
+}
+
+.section-box,
+.hero-panel,
+.info-panel,
+.project-card,
+.sub-panel {
+  animation: rise-in 420ms ease both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 640px) {
@@ -301,10 +357,31 @@ body {
   .hero-panel {
     padding: 1.2rem;
   }
+
+  .section-content-grid {
+    gap: 0.7rem;
+  }
+
+  .project-card-top {
+    align-items: flex-start;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .site-shell a:not(.cta-primary):not(.cta-secondary):not(.nav-link):not(.brand-mark) {
     transition: none;
+  }
+
+  .section-box,
+  .hero-panel,
+  .info-panel,
+  .project-card,
+  .sub-panel,
+  .section-heading,
+  .cta-primary,
+  .cta-secondary {
+    animation: none;
+    transition: none;
+    transform: none;
   }
 }

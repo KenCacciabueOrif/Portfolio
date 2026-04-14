@@ -22,7 +22,7 @@ export default function AboutPage() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="section-title">Experiences</h2>
+        <h2 className="section-title section-heading">Experiences</h2>
         {professionalExperiences.map((experience) => (
           <article
             key={`${experience.organization}-${experience.period}`}
@@ -41,7 +41,7 @@ export default function AboutPage() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="section-title">Projets passes</h2>
+        <h2 className="section-title section-heading">Projets passes</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {pastProjects.map((project) => (
             <article key={project.title} className="project-card">

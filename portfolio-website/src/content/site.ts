@@ -23,7 +23,6 @@ export type PastProject = {
   context: string;
   contribution: string;
   stack: string;
-  source: "CV" | "Lettre de motivation";
 };
 
 export type ProjectCard = {
@@ -140,7 +139,6 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Developpement de l'application full stack, structuration technique et deploiement.",
     stack: "Next.js, TypeScript, PostgreSQL, Prisma, Vercel, Git",
-    source: "CV",
   },
   {
     title: "Template d'API + API d'authentification",
@@ -150,7 +148,6 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Developpement API, gestion des profils, integration Azure AD et documentation REST automatisee.",
     stack: "Java Spring Boot, Maven, Docker, Git",
-    source: "CV",
   },
   {
     title: "HTTP Battles",
@@ -159,8 +156,7 @@ export const pastProjects: PastProject[] = [
       "Projet formatif de bataille navale pilotee par requetes HTTP.",
     contribution:
       "Conception API, creation base de donnees et logique orientee gameplay.",
-    stack: "React.js, Express.js, MongoDB, Mongoose, Git",
-    source: "CV",
+    stack: "Express.js, MongoDB, Mongoose, Git",
   },
   {
     title: "Prototypage interactif personnel",
@@ -170,7 +166,6 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Prototypage avec Godot/Blender et renforcement logique gameplay via modding C#.",
     stack: "Godot (bases), Blender (bases), C#",
-    source: "Lettre de motivation",
   },
   {
     title: "Refonte site Junior Entreprise HEG",
@@ -180,7 +175,6 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Refonte WordPress et participation a la transition serveur.",
     stack: "WordPress, administration web",
-    source: "CV",
   },
 ];
 

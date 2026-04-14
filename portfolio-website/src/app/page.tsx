@@ -23,7 +23,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function Home() {
   return (
     // Page d'accueil orientee CV: profil, competences, credentials et actions de contact.
-    <div className="space-y-6 sm:space-y-7">
+    <div className="space-y-7 sm:space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">{cvIdentity.name}</p>
         <h1 className="hero-title">{homeCopy.heroTitle}</h1>
@@ -72,7 +72,7 @@ export default function Home() {
         <div className="section-content-grid sm:grid-cols-2">
           {cvSkillGroups.map((group) => (
             <article key={group.label} className="sub-panel">
-              <h3 className="section-title">{group.label}</h3>
+              <h3 className="section-title text-[1.03rem]">{group.label}</h3>
               <ul className="stack-list">
                 {group.items.map((skill) => (
                   <li key={skill}>{skill}</li>
