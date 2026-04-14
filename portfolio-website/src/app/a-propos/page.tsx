@@ -63,10 +63,10 @@ export default function AboutPage() {
         {/* Reutilise socialLinks pour centraliser la maintenance des URLs. */}
         <h2 className="section-title">Presence en ligne</h2>
         <div className="flex flex-wrap gap-3">
-          <a href={socialLinks.github} target="_blank" rel="noreferrer">
+          <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href={socialLinks.linkedin} target="_blank" rel="noreferrer">
+          <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </div>

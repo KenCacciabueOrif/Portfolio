@@ -10,7 +10,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="project-card">
       <div className="project-card-top">
-        <h2 className="project-title">{project.title}</h2>
+        <h3 className="project-title">{project.title}</h3>
         <span className="status-pill">{project.status}</span>
       </div>
       <p className="project-summary">{project.summary}</p>
