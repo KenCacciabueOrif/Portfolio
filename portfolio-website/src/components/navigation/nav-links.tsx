@@ -4,7 +4,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navLinks } from "./site-content";
+import { navLinks } from "@/src/content/site";
 
 // Composant client car usePathname depend de l'etat de navigation cote navigateur.
 export function NavLinks() {

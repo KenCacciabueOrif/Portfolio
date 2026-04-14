@@ -1,7 +1,7 @@
 // Purpose: Route metadata sitemap; genere automatiquement la liste des URLs indexables.
 // Exports: `sitemap`, fonction qui retourne les entrees XML avec priorites et frequences.
 import type { MetadataRoute } from "next";
-import { siteUrl } from "./seo";
+import { siteUrl } from "@/src/config/seo";
 
 // Route speciale App Router: Next.js expose ce tableau au format /sitemap.xml.
 export default function sitemap(): MetadataRoute.Sitemap {

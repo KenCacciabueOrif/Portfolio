@@ -1,11 +1,12 @@
 // Purpose: Layout racine App Router; applique polices, structure globale et metadata par defaut.
 // Exports: `metadata` (base SEO globale) et `RootLayout` (enveloppe commune de toutes les routes).
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-import { NavLinks } from "./nav-links";
-import { createPageMetadata, siteUrl } from "./seo";
+import { NavLinks } from "@/src/components/navigation/nav-links";
+import { createPageMetadata, siteUrl } from "@/src/config/seo";
+import { siteMetadata } from "@/src/content/copy";
 
 // Charge les polices Google et expose des variables CSS reutilisables dans toute l'app.
 const geistSans = Geist({
@@ -16,9 +17,8 @@ const geistSans = Geist({
 // Metadonnees globales appliquees a toutes les pages (titre + description SEO).
 export const metadata: Metadata = {
   ...createPageMetadata({
-    title: "Portfolio - Ken D. Cacciabue",
-    description:
-      "Portfolio developpeur full stack junior: CV, experiences, competences et contact stage.",
+    title: siteMetadata.defaultTitle,
+    description: siteMetadata.defaultDescription,
   }),
   metadataBase: new URL(siteUrl),
 };

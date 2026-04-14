@@ -1,14 +1,14 @@
 // Purpose: Page /contact; centralise les coordonnees et points d'entree professionnels.
 // Exports: `metadata` (SEO de la route) et `ContactPage` (composant de page serveur).
 import type { Metadata } from "next";
-import { createPageMetadata } from "../seo";
-import { contactInfo, socialLinks } from "../site-content";
+import { createPageMetadata } from "@/src/config/seo";
+import { contactCopy, siteMetadata } from "@/src/content/copy";
+import { contactInfo, socialLinks } from "@/src/content/site";
 
 // SEO dedie a /contact pour cibler les requetes de prise de contact/candidature.
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact | Portfolio - Ken D. Cacciabue",
-  description:
-    "Contact stage developpement logiciel: email, telephone, localisation et liens professionnels.",
+  title: siteMetadata.contact.title,
+  description: siteMetadata.contact.description,
 });
 
 export default function ContactPage() {
@@ -17,11 +17,8 @@ export default function ContactPage() {
     <div className="space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">Contact</p>
-        <h1 className="hero-title">Candidature stage developpement logiciel</h1>
-        <p className="hero-copy">
-          Je recherche un stage pour contribuer sur des sujets web full stack,
-          API backend, interactivite et architecture logicielle.
-        </p>
+        <h1 className="hero-title">{contactCopy.heroTitle}</h1>
+        <p className="hero-copy">{contactCopy.heroSummary}</p>
       </section>
 
       <section className="info-panel">
@@ -40,7 +37,7 @@ export default function ContactPage() {
       </section>
 
       <section className="info-panel">
-        {/* Les liens externes restent centralises dans site-content.ts. */}
+        {/* Les liens externes restent centralises dans src/content/site.ts. */}
         {/* Regroupe les canaux professionnels pour simplifier la prise de contact. */}
         <h2 className="section-title">Liens professionnels</h2>
         <div className="flex flex-wrap gap-3">

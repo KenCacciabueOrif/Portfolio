@@ -1,7 +1,7 @@
 // Purpose: Route metadata robots; genere automatiquement le contenu de /robots.txt.
 // Exports: `robots`, fonction qui definit les regles de crawl et l'URL du sitemap.
 import type { MetadataRoute } from "next";
-import { siteUrl } from "./seo";
+import { siteUrl } from "@/src/config/seo";
 
 // Route speciale App Router: Next.js genere automatiquement /robots.txt depuis cet objet.
 export default function robots(): MetadataRoute.Robots {

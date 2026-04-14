@@ -2,15 +2,15 @@
 // Exports: `metadata` (SEO de la route /) et `Home` (composant de page serveur).
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ProjectCard } from "./components/project-card";
-import { createPageMetadata } from "./seo";
-import { contactInfo, projects, socialLinks } from "./site-content";
+import { ProjectCard } from "@/src/components/projects/project-card";
+import { createPageMetadata } from "@/src/config/seo";
+import { homeCopy, siteMetadata } from "@/src/content/copy";
+import { contactInfo, projects, socialLinks } from "@/src/content/site";
 
 // Metadonnees SEO specifiques a la page d'accueil (fusionnees avec celles du layout).
 export const metadata: Metadata = createPageMetadata({
-  title: "Accueil | Portfolio - Ken D. Cacciabue",
-  description:
-    "Developpeur full stack junior: profil, projets en cours et contact pour stage developpement logiciel.",
+  title: siteMetadata.home.title,
+  description: siteMetadata.home.description,
 });
 
 export default function Home() {
@@ -19,13 +19,9 @@ export default function Home() {
     <div className="space-y-10">
       <section className="hero-panel">
         <p className="eyebrow">Ken D. Cacciabue</p>
-        <h1 className="hero-title">
-          Developpeur full stack junior
-        </h1>
+        <h1 className="hero-title">{homeCopy.heroTitle}</h1>
         <p className="hero-copy">
-          Je contribue a des projets web et API concrets avec une approche
-          orientee qualite, fiabilite et amelioration continue. Stack principale:
-          Next.js, TypeScript, Spring Boot, Node.js et PostgreSQL.
+          {homeCopy.heroSummary}
         </p>
         <div className="flex flex-wrap gap-3">
           <Link href="/projets" className="cta-primary">
@@ -46,7 +42,7 @@ export default function Home() {
       </section>
 
       <section className="info-panel">
-        {/* Les URL viennent de site-content.ts pour rester coherentes sur tout le site. */}
+        {/* Les URL viennent de src/content/site.ts pour rester coherentes sur tout le site. */}
         <h2 className="section-title">Liens rapides</h2>
         <div className="flex flex-wrap gap-3">
           <a href={socialLinks.github} target="_blank" rel="noreferrer">
