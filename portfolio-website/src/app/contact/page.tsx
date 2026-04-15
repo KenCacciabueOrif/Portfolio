@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/src/config/seo";
 import { contactCopy, siteMetadata } from "@/src/content/copy";
 import { contactInfo, socialLinks } from "@/src/content/site";
 
-// SEO dedie a /contact pour cibler les requetes de prise de contact/candidature.
+// SEO dedie a /contact pour centraliser les points de contact du portfolio.
 export const metadata: Metadata = createPageMetadata({
   title: siteMetadata.contact.title,
   description: siteMetadata.contact.description,
@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function ContactPage() {
   return (
-    // Page orientee conversion: message de disponibilite, coordonnees, puis actions de contact.
+    // Page orientee contact: coordonnees, disponibilite portfolio, puis actions de contact.
     <div className="space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">Contact</p>
@@ -32,7 +32,7 @@ export default function ContactPage() {
             Telephone: <a href={`tel:${contactInfo.phone}`}>+41 79 721 69 23</a>
           </li>
           <li>Localisation: {contactInfo.location}</li>
-          <li>Disponibilite: {contactInfo.availability}</li>
+          <li>Statut: {contactInfo.availability}</li>
         </ul>
       </section>
 

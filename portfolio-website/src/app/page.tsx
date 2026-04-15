@@ -22,14 +22,14 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function Home() {
   return (
-    // Page d'accueil orientee CV: profil, competences, credentials et actions de contact.
+    // Page d'accueil orientee portfolio: profil, competences, credentials et axes de projets.
     <div className="space-y-7 sm:space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">{cvIdentity.name}</p>
         <h1 className="hero-title">{homeCopy.heroTitle}</h1>
         <p className="hero-copy">{homeCopy.heroSummary}</p>
         <p className="hero-copy">
-          <strong>Role vise:</strong> {cvIdentity.role}
+          <strong>Positionnement:</strong> {cvIdentity.role}
           <br />
           <strong>Objectif:</strong> {cvIdentity.objective}
         </p>
@@ -55,7 +55,7 @@ export default function Home() {
       <section className="section-box">
         <h2 className="section-title">Projets en cours</h2>
         <p className="project-summary section-intro">
-          Apercu de deux projets actifs. La liste complete reste sur la page Projets.
+          Apercu de deux axes actifs. La liste complete reste sur la page Projets.
         </p>
         <div className="section-content-grid sm:grid-cols-2">
           {projects.slice(0, 2).map((project) => (

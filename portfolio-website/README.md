@@ -76,6 +76,8 @@ npm run start
 
 Deploiement cible: Vercel.
 
+Le site lui-meme ne necessite pas de backend dedie a ce stade. Son role est de presenter le profil, les experiences et les cartes projets, puis de pointer vers les depots et demos des projets principaux au fur et a mesure.
+
 Workflow recommande:
 
 1. Push sur la branche de travail

@@ -4,11 +4,11 @@
 export const siteMetadata = {
   defaultTitle: "Portfolio - Ken D. Cacciabue",
   defaultDescription:
-    "Portfolio developpeur full stack junior: CV, competences, experiences et contact stage.",
+    "Portfolio de projets logiciels: vitrine personnelle, competences, experiences et roadmap de projets differencies.",
   home: {
     title: "Accueil | Portfolio - Ken D. Cacciabue",
     description:
-      "CV developpeur full stack junior: competences, credentials, formation et points de contact.",
+      "Presentation synthetique du profil, des competences et des trois axes projets du portfolio.",
   },
   about: {
     title: "A propos | Portfolio - Ken D. Cacciabue",
@@ -18,19 +18,19 @@ export const siteMetadata = {
   projects: {
     title: "Projets | Portfolio - Ken D. Cacciabue",
     description:
-      "Roadmap des projets 2026: Task Manager, Expense Tracker, URL Shortener et Notes App.",
+      "Roadmap des projets 2026: une application Next.js full stack PWA, une application React Router avec Spring Boot et un prototype Godot.",
   },
   contact: {
     title: "Contact | Portfolio - Ken D. Cacciabue",
     description:
-      "Contact stage developpement logiciel: email, telephone, localisation et liens professionnels.",
+      "Coordonnees, liens professionnels et point de contact autour du portfolio et des projets en cours.",
   },
 };
 
 export const homeCopy = {
-  heroTitle: "CV - Developpeur full stack junior",
+  heroTitle: "Portfolio - Developpeur full stack et projets interactifs",
   heroSummary:
-    "Presentation synthetique de mon profil, mes competences et mes credentials pour un stage en developpement logiciel.",
+    "Presentation synthetique de mon profil, de mes competences et d'une roadmap de projets volontairement differencies.",
 };
 
 export const aboutCopy = {
@@ -42,11 +42,11 @@ export const aboutCopy = {
 export const projectsCopy = {
   heroTitle: "Roadmap projets 2026",
   heroSummary:
-    "Ces projets sont en cours de construction dans un ordre defini pour demontrer des competences full stack complementaires.",
+    "Ces trois projets sont concus pour montrer des competences differentes: web full stack unifie, architecture frontend/backend separee et interactivite hors web.",
 };
 
 export const contactCopy = {
-  heroTitle: "Candidature stage developpement logiciel",
+  heroTitle: "Contact et suivi du portfolio",
   heroSummary:
-    "Je recherche un stage pour contribuer sur des sujets web full stack, API backend, interactivite et architecture logicielle.",
+    "Cette page centralise mes coordonnees et mes liens professionnels pour suivre l'evolution du portfolio et des projets publies.",
 };

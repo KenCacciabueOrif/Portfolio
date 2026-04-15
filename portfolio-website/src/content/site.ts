@@ -51,41 +51,41 @@ export const contactInfo = {
   email: "kencacciabue@outlook.com",
   phone: "+41797216923",
   location: "Ste-Croix, Suisse",
-  availability: "stage dev logiciel (full stack / API)",
+  availability: "portfolio en evolution et projets demonstrables en preparation",
 };
 
 export const cvIdentity = {
   name: "Ken D. Cacciabue",
   role: "Developpeur Full Stack Junior",
   objective:
-    "Contribuer a des projets web et API concrets avec un impact mesurable pour les utilisateurs et l'organisation.",
+    "Construire un portfolio de projets differencies pour demontrer une vraie polyvalence entre web full stack, architecture backend et interactivite.",
   profile: [
     "Approche pragmatique: qualite du code, collaboration d'equipe et amelioration continue.",
-    "Polyvalence full stack: frontend, backend/API, data et deploiement.",
-    "Motivation forte pour construire des produits utiles, lisibles et fiables.",
+    "Polyvalence technique: frontend, backend/API, data, deploiement et prototypage interactif.",
+    "Recherche d'un portfolio lisible, demonstrable et utile plutot qu'une accumulation de projets similaires.",
   ],
 };
 
 export const cvSkillGroups: CvSkillGroup[] = [
   {
     label: "Web et frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: ["React.js", "Next.js", "React Router", "TypeScript"],
   },
   {
     label: "Backend et API",
-    items: ["Java Spring Boot", "Node.js", "Express.js"],
+    items: ["Java Spring Boot", "Node.js", "API REST"],
   },
   {
     label: "Data",
-    items: ["PostgreSQL", "MySQL", "PL/SQL", "MongoDB", "Neo4j"],
+    items: ["PostgreSQL", "Prisma", "MongoDB Atlas", "MySQL", "PL/SQL"],
   },
   {
     label: "Outils et deploiement",
     items: ["Git", "Docker", "Python", "Vercel", "Shell/PowerShell"],
   },
   {
-    label: "Complementaires",
-    items: ["C#", "Godot (bases)", "Blender (bases)", "Cisco (bases)"],
+    label: "Interactivite et complementaires",
+    items: ["C#", "Godot", "Blender", "Cisco (bases)"],
   },
 ];
 
@@ -182,31 +182,24 @@ export const pastProjects: PastProject[] = [
 // Donnees des cartes projets reutilisees sur l'accueil (extrait) et la page projets (liste complete).
 export const projects: ProjectCard[] = [
   {
-    title: "Task Manager Collaboratif",
+    title: "Application web full stack PWA",
     summary:
-      "Gestion des taches, priorites et filtres dans une interface orientee productivite.",
-    stack: "Next.js, Tailwind CSS, API backend, PostgreSQL",
+      "Projet web unifie avec experience utilisateur moderne, logique serveur integree et socle PWA demonstrable.",
+    stack: "Next.js, TypeScript, Prisma, PostgreSQL, Vercel",
     status: "En cours",
   },
   {
-    title: "Expense Tracker Personnel",
+    title: "Application React Router + Spring Boot",
     summary:
-      "Suivi depenses/revenus avec dashboard simple et visualisation des tendances.",
-    stack: "Next.js, API Node.js, PostgreSQL",
+      "Application a architecture separee avec frontend SPA, backend Java et persistance MongoDB Atlas.",
+    stack: "React Router, Spring Boot, MongoDB Atlas",
     status: "En cours",
   },
   {
-    title: "URL Shortener & Analytics",
+    title: "Jeu ou prototype interactif Godot",
     summary:
-      "Creation de liens courts avec redirection et statistiques de clics par periode.",
-    stack: "Next.js, API backend, PostgreSQL",
-    status: "En cours",
-  },
-  {
-    title: "Notes App avec Tags & Search",
-    summary:
-      "Edition de notes en Markdown, tags multi-notes et recherche texte rapide.",
-    stack: "Next.js, API CRUD, PostgreSQL",
+      "Projet interactif hors web pour montrer logique gameplay, code C# et pipeline d'assets avec Blender.",
+    stack: "Godot, C#, Blender",
     status: "En cours",
   },
 ];

@@ -50,7 +50,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="site-footer mx-auto w-full max-w-[23.5rem] px-3 pb-8 pt-2 text-sm sm:max-w-6xl sm:px-8 sm:pb-10">
-          Ken D. Cacciabue - Portfolio et candidature stage
+          Ken D. Cacciabue - Portfolio de projets logiciels
         </footer>
       </body>
     </html>
