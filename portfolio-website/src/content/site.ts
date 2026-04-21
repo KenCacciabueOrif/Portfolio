@@ -17,12 +17,18 @@ export type ProfessionalExperience = {
   highlights: string[];
 };
 
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
 export type PastProject = {
   title: string;
   period: string;
   context: string;
   contribution: string;
   stack: string;
+  links?: ProjectLink[];
 };
 
 export type ProjectCard = {
@@ -148,6 +154,16 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Developpement API, gestion des profils, integration Azure AD et documentation REST automatisee.",
     stack: "Java Spring Boot, Maven, Docker, Git",
+    links: [
+      {
+        label: "spring-auth",
+        href: "https://github.com/OrifInformatique/spring-auth",
+      },
+      {
+        label: "template_frontback",
+        href: "https://github.com/OrifInformatique/template_frontback",
+      },
+    ],
   },
   {
     title: "HTTP Battles",
@@ -157,6 +173,12 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Conception API, creation base de donnees et logique orientee gameplay.",
     stack: "Express.js, MongoDB, Mongoose, Git",
+    links: [
+      {
+        label: "http-battles",
+        href: "https://github.com/OrifInformatique/http-battles",
+      },
+    ],
   },
   {
     title: "Prototypage interactif personnel",

@@ -410,6 +410,31 @@ body {
   color: color-mix(in oklab, var(--foreground) 80%, var(--brand-2) 20%);
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.project-links a {
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--line) 68%, var(--accent) 32%);
+  background: color-mix(in oklab, var(--card) 80%, white 20%);
+  color: color-mix(in oklab, var(--foreground) 88%, var(--accent-2) 12%);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.32rem 0.7rem;
+  text-decoration: none;
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent) 55%, var(--line) 45%);
+  color: color-mix(in oklab, var(--accent) 78%, var(--foreground) 22%);
+}
+
 /* =========================
    Theme: Animation
    ========================= */
@@ -536,6 +561,10 @@ body {
 
   .project-stack {
     margin-top: 0.52rem;
+  }
+
+  .project-links {
+    margin-top: 0.65rem;
   }
 
   .project-card-top {

@@ -54,6 +54,20 @@ export default function AboutPage() {
                 <strong>Contribution:</strong> {project.contribution}
               </p>
               <p className="project-stack">{project.stack}</p>
+              {project.links?.length ? (
+                <div className="project-links" aria-label={`Liens du projet ${project.title}`}>
+                  {project.links.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
