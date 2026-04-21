@@ -1,6 +1,6 @@
 /**
  * Last updated: 2026-04-21
- * Changes: Added a maintenance header and converted contact page comments to English.
+ * Changes: Restored French accents in the contact labels and supporting copy.
  * Purpose: Centralize direct contact details and professional profile links for the portfolio.
  */
 import type { Metadata } from "next";
@@ -32,7 +32,7 @@ export default function ContactPage() {
             Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           </li>
           <li>
-            Telephone: <a href={`tel:${contactInfo.phone}`}>+41 79 721 69 23</a>
+            Téléphone: <a href={`tel:${contactInfo.phone}`}>+41 79 721 69 23</a>
           </li>
           <li>Localisation: {contactInfo.location}</li>
           <li>Statut: {contactInfo.availability}</li>

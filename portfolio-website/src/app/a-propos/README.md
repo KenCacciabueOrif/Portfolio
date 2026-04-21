@@ -1,5 +1,5 @@
 > Last updated: 2026-04-21
-> Changes: Added README maintenance metadata for the About route folder.
+> Changes: Documented the reuse of the shared past-project card and refreshed the route description.
 
 # Portfolio Website About Route
 
@@ -11,7 +11,7 @@ This folder contains the About page route for the portfolio website.
 
 ## Code Comment Index
 
-- [page.tsx](page.tsx): documents the experience timeline section, the richer past-project cards, and the centralized social link usage.
+- [page.tsx](page.tsx): documents the experience timeline section, reuse of the shared past-project card, and the centralized social link usage.
 
 ## Maintenance Steps
 

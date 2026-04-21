@@ -1,6 +1,6 @@
 /**
  * Last updated: 2026-04-21
- * Changes: Added a maintenance header and grouped shared portfolio data with explicit English comments.
+ * Changes: Added featured past projects for the home page and restored French accents in the shared content.
  * Purpose: Provide the single source of truth for navigation, profile data, contact data, and project content.
  */
 
@@ -46,7 +46,7 @@ export type ProjectCard = {
 // Navigation data is mapped by the layout and client navigation component.
 export const navLinks: NavLink[] = [
   { href: "/", label: "Accueil" },
-  { href: "/a-propos", label: "A propos" },
+  { href: "/a-propos", label: "À propos" },
   { href: "/projets", label: "Projets" },
   { href: "/contact", label: "Contact" },
 ];
@@ -62,19 +62,19 @@ export const contactInfo = {
   email: "kencacciabue@outlook.com",
   phone: "+41797216923",
   location: "Ste-Croix, Suisse",
-  availability: "portfolio en evolution et projets demonstrables en preparation",
+  availability: "portfolio en évolution et projets démontrables en préparation",
 };
 
 // Identity and positioning statements are reused across the landing and profile pages.
 export const cvIdentity = {
   name: "Ken D. Cacciabue",
-  role: "Developpeur Full Stack Junior",
+  role: "Développeur Full Stack Junior",
   objective:
-    "Construire un portfolio de projets differencies pour demontrer une vraie polyvalence entre web full stack, architecture backend et interactivite.",
+    "Construire un portfolio de projets différenciés pour démontrer une vraie polyvalence entre web full stack, architecture backend et interactivité.",
   profile: [
-    "Approche pragmatique: qualite du code, collaboration d'equipe et amelioration continue.",
-    "Polyvalence technique: frontend, backend/API, data, deploiement et prototypage interactif.",
-    "Recherche d'un portfolio lisible, demonstrable et utile plutot qu'une accumulation de projets similaires.",
+    "Approche pragmatique: qualité du code, collaboration d'équipe et amélioration continue.",
+    "Polyvalence technique: frontend, backend/API, data, déploiement et prototypage interactif.",
+    "Recherche d'un portfolio lisible, démontrable et utile plutôt qu'une accumulation de projets similaires.",
   ],
 };
 
@@ -93,11 +93,11 @@ export const cvSkillGroups: CvSkillGroup[] = [
     items: ["PostgreSQL", "Prisma", "MongoDB Atlas", "MySQL", "PL/SQL"],
   },
   {
-    label: "Outils et deploiement",
+    label: "Outils et déploiement",
     items: ["Git", "Docker", "Python", "Vercel", "Shell/PowerShell"],
   },
   {
-    label: "Interactivite et complementaires",
+    label: "Interactivité et complémentaires",
     items: ["C#", "Godot", "Blender", "Cisco (bases)"],
   },
 ];
@@ -105,14 +105,14 @@ export const cvSkillGroups: CvSkillGroup[] = [
 // Credentials are kept as short lists because they are rendered directly as readable bullet points.
 export const credentials = {
   education: [
-    "2025-present: CFC Informaticien en developpement d'applications (Orif Pomy)",
+    "2025-present: CFC Informaticien en développement d'applications (Orif Pomy)",
     "2020-2023: HEG Geneve, informatique de gestion",
-    "2023: CPNV Ste-Croix, mediamatique",
+    "2023: CPNV Ste-Croix, médiamatique",
   ],
   languages: [
-    "Francais: natif",
+    "Français: natif",
     "Anglais: B2",
-    "Italien: maturite italienne (formation secondaire italienne)",
+    "Italien: maturité italienne (formation secondaire italienne)",
   ],
   references: [
     "Attila Kruezsely - Attila.Kruezsely@orif.ch",
@@ -126,16 +126,16 @@ export const professionalExperiences: ProfessionalExperience[] = [
   {
     period: "2024-present",
     organization: "Orif Pomy",
-    role: "Developpement d'applications (formation CFC)",
+    role: "Développement d'applications (formation CFC)",
     highlights: [
-      "Developpement full stack sur des projets web et API en contexte reel.",
-      "Conception API, modelisation de donnees, documentation technique et deploiement.",
-      "Application des bonnes pratiques: architecture, lisibilite, testabilite et maintenance.",
+      "Développement full stack sur des projets web et API en contexte réel.",
+      "Conception API, modélisation de données, documentation technique et déploiement.",
+      "Application des bonnes pratiques: architecture, lisibilité, testabilité et maintenance.",
     ],
   },
   {
     period: "2020-2022",
-    organization: "Junior Entreprise HEG Geneve (benevolat)",
+    organization: "Junior Entreprise HEG Genève (bénévolat)",
     role: "Membre IT",
     highlights: [
       "Refonte du site internet sous WordPress.",
@@ -151,18 +151,18 @@ export const pastProjects: PastProject[] = [
     title: "Simpl.",
     period: "Orif Pomy - 2024-present",
     context:
-      "Reseau social de partage de posts textuels avec tri par proximite geographique et moderation communautaire.",
+      "Réseau social de partage de posts textuels avec tri par proximité géographique et modération communautaire.",
     contribution:
-      "Developpement de l'application full stack, structuration technique et deploiement.",
+      "Développement de l'application full stack, structuration technique et déploiement.",
     stack: "Next.js, TypeScript, PostgreSQL, Prisma, Vercel, Git",
   },
   {
     title: "Template d'API + API d'authentification",
     period: "Orif Pomy - 2024-present",
     context:
-      "Creation d'un template reutilisable pour accelerer les futurs projets et d'une API d'authentification complete.",
+      "Création d'un template réutilisable pour accélérer les futurs projets et d'une API d'authentification complète.",
     contribution:
-      "Developpement API, gestion des profils, integration Azure AD et documentation REST automatisee.",
+      "Développement API, gestion des profils, intégration Azure AD et documentation REST automatisée.",
     stack: "Java Spring Boot, Maven, Docker, Git",
     links: [
       {
@@ -179,9 +179,9 @@ export const pastProjects: PastProject[] = [
     title: "HTTP Battles",
     period: "Orif Pomy - 2024-present",
     context:
-      "Projet formatif de bataille navale pilotee par requetes HTTP.",
+      "Projet formatif de bataille navale pilotée par requêtes HTTP.",
     contribution:
-      "Conception API, creation base de donnees et logique orientee gameplay.",
+      "Conception API, création base de données et logique orientée gameplay.",
     stack: "Express.js, MongoDB, Mongoose, Git",
     links: [
       {
@@ -194,7 +194,7 @@ export const pastProjects: PastProject[] = [
     title: "Prototypage interactif personnel",
     period: "Projets personnels",
     context:
-      "Experimentation de mecaniques interactives et iteration rapide sur des prototypes.",
+      "Expérimentation de mécaniques interactives et itération rapide sur des prototypes.",
     contribution:
       "Prototypage avec Godot/Blender et renforcement logique gameplay via modding C#.",
     stack: "Godot (bases), Blender (bases), C#",
@@ -203,26 +203,31 @@ export const pastProjects: PastProject[] = [
     title: "Refonte site Junior Entreprise HEG",
     period: "HEG Geneve - 2020-2022",
     context:
-      "Contribution benevole a l'activite IT de la Junior Entreprise.",
+      "Contribution bénévole à l'activité IT de la Junior Entreprise.",
     contribution:
-      "Refonte WordPress et participation a la transition serveur.",
+      "Refonte WordPress et participation à la transition serveur.",
     stack: "WordPress, administration web",
   },
 ];
+
+// Featured past projects prioritize entries that already expose proof links for the landing page.
+export const featuredPastProjects: PastProject[] = pastProjects.filter(
+  (project) => project.links?.length,
+);
 
 // Project roadmap cards are reused on the home page preview and the full projects page.
 export const projects: ProjectCard[] = [
   {
     title: "Application web full stack PWA",
     summary:
-      "Projet web unifie avec experience utilisateur moderne, logique serveur integree et socle PWA demonstrable.",
+      "Projet web unifié avec expérience utilisateur moderne, logique serveur intégrée et socle PWA démontrable.",
     stack: "Next.js, TypeScript, Prisma, PostgreSQL, Vercel",
     status: "En cours",
   },
   {
     title: "Application React Router + Spring Boot",
     summary:
-      "Application a architecture separee avec frontend SPA, backend Java et persistance MongoDB Atlas.",
+      "Application à architecture séparée avec frontend SPA, backend Java et persistance MongoDB Atlas.",
     stack: "React Router, Spring Boot, MongoDB Atlas",
     status: "En cours",
   },

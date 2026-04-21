@@ -1,5 +1,5 @@
 > Last updated: 2026-04-21
-> Changes: Added README maintenance metadata for the App Router source folder.
+> Changes: Documented that the home page now highlights proof-backed past projects before the active roadmap.
 
 # Portfolio Website App Router
 
@@ -18,7 +18,7 @@ This folder stores the Next.js App Router structure and the root application fil
 ## Code Comment Index
 
 - [layout.tsx](layout.tsx): documents the shared shell, default metadata flow, and layout-level navigation decisions.
-- [page.tsx](page.tsx): documents the landing page structure, project preview strategy, and centralized contact links.
+- [page.tsx](page.tsx): documents the landing page structure, the proof-backed past-project section, the roadmap recap, and centralized contact links.
 - [globals.css](globals.css): documents the token system, navigation behavior, section styling, and breakpoint rules.
 - [robots.ts](robots.ts): documents how the robots metadata route is generated.
 - [sitemap.ts](sitemap.ts): documents sitemap generation and crawl frequency choices.
