@@ -1,9 +1,12 @@
-﻿# Portfolio - Vision et Pilotage
+﻿> Last updated: 2026-04-21
+> Changes: Added README maintenance metadata and aligned the portfolio product README with Home documentation rules.
+
+# Portfolio - Vision et Pilotage
 
 Ce README decrit le portfolio au niveau produit: vision, priorites, contenus attendus et ordre des projets.
 
 Le README technique de l'application web se trouve dans:
-`portfolio-website/README.md`
+[portfolio-website/README.md](portfolio-website/README.md)
 
 ## Role de ce dossier
 
@@ -70,7 +73,17 @@ Construire un portfolio qui permet de comprendre rapidement:
 
 ## Liens utiles
 
-- README technique de l'app web: `portfolio-website/README.md`
+- README technique de l'app web: [portfolio-website/README.md](portfolio-website/README.md)
+
+## Maintenance Steps
+
+1. Mettre a jour cette roadmap lorsqu'un projet change de priorite, de scope ou de statut.
+2. Garder les liens entre vision produit et README techniques synchronises.
+3. Documenter ici tout changement qui modifie l'ordre de publication ou le positionnement du portfolio.
+
+## Todo
+
+- Ajouter un statut explicite pour chaque projet prioritaire si le suivi devient plus frequent.
 
 ## Auteur
 

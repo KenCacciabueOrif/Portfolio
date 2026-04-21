@@ -1,11 +1,14 @@
-// Purpose: Route metadata sitemap; genere automatiquement la liste des URLs indexables.
-// Exports: `sitemap`, fonction qui retourne les entrees XML avec priorites et frequences.
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted sitemap route comments to English.
+ * Purpose: Generate the sitemap metadata route for the indexable portfolio pages.
+ */
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/src/config/seo";
 
-// Route speciale App Router: Next.js expose ce tableau au format /sitemap.xml.
+// Next.js exposes this array as the generated /sitemap.xml response.
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Date courante appliquee a toutes les pages pour indiquer une actualisation recente.
+  // Reuse one timestamp so every sitemap entry reflects the same generation moment.
   const now = new Date();
 
   return [
@@ -18,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteUrl}/a-propos`,
       lastModified: now,
-      // Pages plus stables: cadence de crawl plus faible.
+      // More stable pages can advertise a lower crawl frequency.
       changeFrequency: "monthly",
       priority: 0.8,
     },

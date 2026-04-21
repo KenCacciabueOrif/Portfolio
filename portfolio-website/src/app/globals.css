@@ -1,13 +1,17 @@
-/* Purpose: Feuille de styles globale; definit tokens, layout, composants UI et responsive. */
-/* Sections: variables CSS, pont Tailwind v4, navigation, hero/info panels, cartes projets. */
+/*
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted the stylesheet comments to English.
+ * Purpose: Define global design tokens, shared layout rules, UI primitives, and responsive behavior.
+ */
+/* Sections: CSS tokens, Tailwind bridge, navigation, panels, editorial content, project cards, motion, and breakpoints. */
 @import "tailwindcss/theme";
 @import "tailwindcss/utilities";
 
 /* =========================
-  Theme: Tokens globaux
+  Theme: Global tokens
   ========================= */
 
-/* Variables CSS par defaut pour le theme clair. */
+/* Default CSS variables for the light theme. */
 :root {
   color-scheme: light dark;
   --brand-1: #003cf0;
@@ -24,7 +28,7 @@
   --muted: color-mix(in oklab, var(--foreground) 74%, white 26%);
 }
 
-/* Theme: Variantes du theme sombre */
+/* Theme: Dark theme overrides */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -56,10 +60,10 @@
 }
 
 /* =========================
-   Theme: Integration Tailwind
+  Theme: Tailwind integration
    ========================= */
 
-/* Pont entre variables CSS et tokens utilises par Tailwind v4. */
+/* Bridge CSS variables into the tokens exposed to Tailwind v4 utilities. */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -68,10 +72,10 @@
 }
 
 /* =========================
-   Theme: Base et accessibilite
+  Theme: Base and accessibility
    ========================= */
 
-/* Reset minimal pour eviter les overflows horizontaux en mobile. */
+/* Minimal reset to avoid horizontal overflow on small screens. */
 *,
 *::before,
 *::after {
@@ -85,7 +89,7 @@ body {
   width: 100%;
 }
 
-/* Style global applique a toute l'application. */
+/* Global body styling shared by every route. */
 body {
   min-height: 100dvh;
   background:
@@ -99,7 +103,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Liens globaux hors composants d'action/navigation. */
+/* Global link styling excluding CTA and navigation elements. */
 .site-shell a:not(.cta-primary):not(.cta-secondary):not(.nav-link):not(.brand-mark) {
   color: var(--accent);
   text-decoration: underline;
@@ -211,7 +215,7 @@ body {
 }
 
 /* =========================
-   Theme: Panels et structure
+  Theme: Panels and structure
    ========================= */
 
 .hero-panel,
@@ -282,7 +286,7 @@ body {
 }
 
 /* =========================
-   Theme: Hero et contenu editorial
+  Theme: Hero and editorial content
    ========================= */
 
 .eyebrow {
@@ -350,7 +354,7 @@ body {
 }
 
 /* =========================
-   Theme: Informations et projets
+  Theme: Information and project cards
    ========================= */
 
 .info-panel {

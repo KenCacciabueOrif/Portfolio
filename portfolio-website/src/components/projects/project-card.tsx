@@ -1,11 +1,15 @@
-// Purpose: Composant de carte projet reutilisable pour l'accueil et la page projets.
-// Exports: `ProjectCard`, qui rend le titre, le statut, le resume et la stack technique.
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted the reusable project card comments to English.
+ * Purpose: Render a reusable project summary card for both the home page preview and the full projects page.
+ */
 import type { ProjectCard as ProjectCardType } from "@/src/content/site";
 
 type ProjectCardProps = {
   project: ProjectCardType;
 };
 
+// The component stays intentionally small because layout and wording come from centralized content data.
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="project-card">

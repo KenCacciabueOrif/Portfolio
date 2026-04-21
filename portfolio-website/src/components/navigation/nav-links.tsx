@@ -1,26 +1,29 @@
-// Purpose: Navigation principale cote client; gere le lien actif selon la route courante.
-// Exports: `NavLinks`, composant qui mappe `navLinks` et renseigne `aria-current`.
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted navigation comments to English.
+ * Purpose: Render the main client-side navigation and expose the active route to assistive technologies.
+ */
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/src/content/site";
 
-// Composant client car usePathname depend de l'etat de navigation cote navigateur.
+// This must stay a client component because usePathname depends on browser navigation state.
 export function NavLinks() {
-  // Lit la route active (ex: /projets) pour marquer visuellement l'entree correspondante.
+  // Read the current route once so every rendered link can compare against the same pathname.
   const pathname = usePathname();
 
   function renderLinks(extraClassName?: string) {
     return navLinks.map((item) => {
-      // Egalite stricte volontaire: seul le lien exact est considere comme actif.
+      // Exact matching avoids marking parent routes as active when the pathname only shares a prefix.
       const isActive = pathname === item.href;
       return (
         <Link
           key={`${item.href}-${extraClassName ?? "base"}`}
           href={item.href}
           className={`nav-link${extraClassName ? ` ${extraClassName}` : ""}`}
-          // aria-current permet aux lecteurs d'ecran d'annoncer la page courante.
+          // aria-current lets screen readers announce which page is currently active.
           aria-current={isActive ? "page" : undefined}
         >
           {item.label}
@@ -33,6 +36,7 @@ export function NavLinks() {
     <nav aria-label="Navigation principale" className="nav-shell">
       <div className="nav-links nav-links-desktop">{renderLinks()}</div>
 
+      {/* The disclosure pattern keeps the mobile navigation compact without introducing extra state. */}
       <details className="nav-mobile-disclosure">
         <summary className="nav-toggle">Menu</summary>
         <div className="nav-links nav-links-mobile">{renderLinks("nav-link-mobile")}</div>

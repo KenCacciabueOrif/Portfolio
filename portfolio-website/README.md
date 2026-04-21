@@ -1,3 +1,6 @@
+> Last updated: 2026-04-21
+> Changes: Added README maintenance metadata and completed the root technical guide with explicit follow-up guidance.
+
 <!-- Purpose: Documentation projet; explique objectifs MVP, stack, scripts et workflow de mise a jour. -->
 # Portfolio Website - Guide Technique
 
@@ -96,12 +99,17 @@ npm run build
 npm run start
 ```
 
-## Maintenance
+## Maintenance Steps
 
 - Garder les dependances a jour
 - Ajouter les nouveaux composants dans les dossiers de domaine adequats
 - Eviter les contenus en dur dans les pages, preferer `src/content/`
 - Mettre a jour les README des sous-dossiers quand l'architecture change
+
+## Todo
+
+- Ajouter un resume court des conventions de contenu si plusieurs types de projets sont publies sur le site.
+- Completer ce README avec le workflow de publication final une fois l'hebergement fige.
 
 ## Auteur
 

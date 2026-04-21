@@ -1,3 +1,6 @@
+> Last updated: 2026-04-21
+> Changes: Added README maintenance metadata for the public assets folder.
+
 # Portfolio Website Public Assets
 
 This folder stores static public assets served directly by the portfolio website.

@@ -1,5 +1,8 @@
-// Purpose: Page d'accueil; combine hero, apercu de projets et liens de contact rapides.
-// Exports: `metadata` (SEO de la route /) et `Home` (composant de page serveur).
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted home page comments to English.
+ * Purpose: Render the landing page with positioning, current roadmap, and direct contact actions.
+ */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ProjectCard } from "@/src/components/projects/project-card";
@@ -14,7 +17,7 @@ import {
   socialLinks,
 } from "@/src/content/site";
 
-// Metadonnees SEO specifiques a la page d'accueil (fusionnees avec celles du layout).
+// Route-level metadata refines the default layout metadata for the landing page.
 export const metadata: Metadata = createPageMetadata({
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
@@ -22,7 +25,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function Home() {
   return (
-    // Page d'accueil orientee portfolio: profil, competences, credentials et axes de projets.
+    // The landing page mixes profile context, roadmap preview, and trust-building credentials.
     <div className="space-y-7 sm:space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">{cvIdentity.name}</p>
@@ -43,6 +46,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Profile statements explain working style before the more detailed experience page. */}
       <section className="section-box">
         <h2 className="section-title">Profil professionnel</h2>
         <ul className="stack-list">
@@ -52,6 +56,7 @@ export default function Home() {
         </ul>
       </section>
 
+      {/* The home page intentionally previews only a subset of projects to keep the first screen focused. */}
       <section className="section-box">
         <h2 className="section-title">Projets en cours</h2>
         <p className="project-summary section-intro">
@@ -64,6 +69,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Skill groups are rendered from shared content so the same taxonomy can evolve centrally. */}
       <section className="section-box">
         <h2 className="section-title">Competences</h2>
         <p className="project-summary section-intro">
@@ -83,6 +89,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Education and languages stay together because both act as concise qualification signals. */}
       <section className="section-box">
         <h2 className="section-title">Formation et langues</h2>
         <div className="section-content-grid sm:grid-cols-2">
@@ -116,7 +123,7 @@ export default function Home() {
       </section>
 
       <section className="section-box">
-        {/* Les URL viennent de src/content/site.ts pour rester coherentes sur tout le site. */}
+        {/* Shared URLs from src/content/site.ts prevent contact links from drifting between pages. */}
         <h2 className="section-title">Liens rapides</h2>
         <div className="flex flex-wrap gap-3">
           <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">

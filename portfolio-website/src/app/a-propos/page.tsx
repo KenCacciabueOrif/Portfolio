@@ -1,11 +1,14 @@
-// Purpose: Page /a-propos; affiche le profil, la stack et les cibles de stage.
-// Exports: `metadata` (SEO de la route) et `AboutPage` (composant de page serveur).
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted About page comments to English.
+ * Purpose: Present professional experience, selected past projects, and external profile links.
+ */
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/src/config/seo";
 import { aboutCopy, siteMetadata } from "@/src/content/copy";
 import { pastProjects, professionalExperiences, socialLinks } from "@/src/content/site";
 
-// SEO dedie a la route /a-propos pour des titres/descriptions plus precis.
+// Route metadata specializes the title and description for the About page.
 export const metadata: Metadata = createPageMetadata({
   title: siteMetadata.about.title,
   description: siteMetadata.about.description,
@@ -13,7 +16,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function AboutPage() {
   return (
-    // Page de presentation centree sur l'experience et les projets deja realises.
+    // This page focuses on completed work so visitors can separate history from roadmap.
     <div className="space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">A propos</p>
@@ -21,6 +24,7 @@ export default function AboutPage() {
         <p className="hero-copy">{aboutCopy.heroSummary}</p>
       </section>
 
+      {/* Experience entries preserve chronology while keeping each role easy to scan. */}
       <section className="space-y-4">
         <h2 className="section-title section-heading">Experiences</h2>
         {professionalExperiences.map((experience) => (
@@ -40,6 +44,7 @@ export default function AboutPage() {
         ))}
       </section>
 
+      {/* Past projects use richer cards because they need context, contribution, and optional links. */}
       <section className="space-y-4">
         <h2 className="section-title section-heading">Projets passes</h2>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -74,7 +79,7 @@ export default function AboutPage() {
       </section>
 
       <section className="info-panel">
-        {/* Reutilise socialLinks pour centraliser la maintenance des URLs. */}
+        {/* Reusing socialLinks keeps external profile URLs consistent with the rest of the site. */}
         <h2 className="section-title">Presence en ligne</h2>
         <div className="flex flex-wrap gap-3">
           <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">

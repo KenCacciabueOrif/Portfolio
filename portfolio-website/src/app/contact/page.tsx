@@ -1,11 +1,14 @@
-// Purpose: Page /contact; centralise les coordonnees et points d'entree professionnels.
-// Exports: `metadata` (SEO de la route) et `ContactPage` (composant de page serveur).
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted contact page comments to English.
+ * Purpose: Centralize direct contact details and professional profile links for the portfolio.
+ */
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/src/config/seo";
 import { contactCopy, siteMetadata } from "@/src/content/copy";
 import { contactInfo, socialLinks } from "@/src/content/site";
 
-// SEO dedie a /contact pour centraliser les points de contact du portfolio.
+// Route metadata makes the contact page explicit for search previews and sharing.
 export const metadata: Metadata = createPageMetadata({
   title: siteMetadata.contact.title,
   description: siteMetadata.contact.description,
@@ -13,7 +16,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function ContactPage() {
   return (
-    // Page orientee contact: coordonnees, disponibilite portfolio, puis actions de contact.
+    // The contact page exposes immediate actions before asking visitors to navigate elsewhere.
     <div className="space-y-8">
       <section className="hero-panel">
         <p className="eyebrow">Contact</p>
@@ -22,7 +25,7 @@ export default function ContactPage() {
       </section>
 
       <section className="info-panel">
-        {/* Informations de contact directes visibles sans interaction. */}
+        {/* Direct contact details stay visible without requiring a form or extra interaction. */}
         <h2 className="section-title">Me joindre</h2>
         <ul className="stack-list">
           <li>
@@ -37,8 +40,8 @@ export default function ContactPage() {
       </section>
 
       <section className="info-panel">
-        {/* Les liens externes restent centralises dans src/content/site.ts. */}
-        {/* Regroupe les canaux professionnels pour simplifier la prise de contact. */}
+        {/* External links stay centralized in src/content/site.ts for easier maintenance. */}
+        {/* Professional channels are grouped together so outreach options can be scanned quickly. */}
         <h2 className="section-title">Liens professionnels</h2>
         <div className="flex flex-wrap gap-3">
           <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">

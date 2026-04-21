@@ -1,7 +1,11 @@
-// Purpose: Utilitaires SEO partages; centralise l'URL canonique et la generation de metadata.
-// Exports: `siteUrl` et `createPageMetadata` pour harmoniser Open Graph/Twitter par page.
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and clarified the shared SEO helper responsibilities.
+ * Purpose: Centralize canonical URL handling and shared page metadata generation.
+ */
 import type { Metadata } from "next";
 
+// The deployed URL can be overridden by environment configuration without changing route code.
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-lilac-gamma-40.vercel.app";
 
@@ -10,7 +14,7 @@ type PageMetadataInput = {
   description: string;
 };
 
-// Fabrique commune pour garder un SEO coherent et eviter la duplication entre routes.
+// Shared metadata generation keeps Open Graph and Twitter fields aligned across routes.
 export function createPageMetadata({
   title,
   description,

@@ -1,3 +1,6 @@
+> Last updated: 2026-04-21
+> Changes: Added README maintenance metadata for the theme components folder.
+
 # Portfolio Website Theme Components
 
 This folder is reserved for theme-related components or utilities.

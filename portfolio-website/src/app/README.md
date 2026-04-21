@@ -1,3 +1,6 @@
+> Last updated: 2026-04-21
+> Changes: Added README maintenance metadata for the App Router source folder.
+
 # Portfolio Website App Router
 
 This folder stores the Next.js App Router structure and the root application files.
@@ -11,6 +14,14 @@ This folder stores the Next.js App Router structure and the root application fil
 - [a-propos](a-propos/README.md): about page
 - [contact](contact/README.md): contact page
 - [projets](projets/README.md): projects page
+
+## Code Comment Index
+
+- [layout.tsx](layout.tsx): documents the shared shell, default metadata flow, and layout-level navigation decisions.
+- [page.tsx](page.tsx): documents the landing page structure, project preview strategy, and centralized contact links.
+- [globals.css](globals.css): documents the token system, navigation behavior, section styling, and breakpoint rules.
+- [robots.ts](robots.ts): documents how the robots metadata route is generated.
+- [sitemap.ts](sitemap.ts): documents sitemap generation and crawl frequency choices.
 
 ## Maintenance Steps
 

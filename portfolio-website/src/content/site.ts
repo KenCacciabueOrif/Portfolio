@@ -1,5 +1,10 @@
-// Purpose: Source de verite du contenu du site (navigation, contact, liens sociaux, projets).
-// Exports: types (`NavLink`, `ProjectCard`) et constantes consommees par les pages/composants.
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and grouped shared portfolio data with explicit English comments.
+ * Purpose: Provide the single source of truth for navigation, profile data, contact data, and project content.
+ */
+
+// Shared types define the content contracts consumed by routes and reusable components.
 export type NavLink = {
   href: string;
   label: string;
@@ -38,8 +43,7 @@ export type ProjectCard = {
   status: "En cours" | "Live";
 };
 
-// Les types servent de contrat unique pour tous les composants qui affichent ces donnees.
-// Source de verite du menu principal: le layout mappe ce tableau pour afficher la navigation.
+// Navigation data is mapped by the layout and client navigation component.
 export const navLinks: NavLink[] = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "A propos" },
@@ -47,12 +51,13 @@ export const navLinks: NavLink[] = [
   { href: "/contact", label: "Contact" },
 ];
 
-// Liens externes centralises pour eviter la duplication dans plusieurs pages.
+// External links stay centralized to avoid duplicating URLs in multiple pages.
 export const socialLinks = {
   github: "https://github.com/KenCacciabueOrif",
   linkedin: "https://www.linkedin.com/in/ken-cacciabue-138770161/",
 };
 
+// Contact details feed both the contact page and quick contact actions on the home page.
 export const contactInfo = {
   email: "kencacciabue@outlook.com",
   phone: "+41797216923",
@@ -60,6 +65,7 @@ export const contactInfo = {
   availability: "portfolio en evolution et projets demonstrables en preparation",
 };
 
+// Identity and positioning statements are reused across the landing and profile pages.
 export const cvIdentity = {
   name: "Ken D. Cacciabue",
   role: "Developpeur Full Stack Junior",
@@ -72,6 +78,7 @@ export const cvIdentity = {
   ],
 };
 
+// Skill groups are intentionally broad so the portfolio can show range before deep specialization.
 export const cvSkillGroups: CvSkillGroup[] = [
   {
     label: "Web et frontend",
@@ -95,6 +102,7 @@ export const cvSkillGroups: CvSkillGroup[] = [
   },
 ];
 
+// Credentials are kept as short lists because they are rendered directly as readable bullet points.
 export const credentials = {
   education: [
     "2025-present: CFC Informaticien en developpement d'applications (Orif Pomy)",
@@ -113,6 +121,7 @@ export const credentials = {
   ],
 };
 
+// Professional experience is modeled separately from past projects to keep timeline sections distinct.
 export const professionalExperiences: ProfessionalExperience[] = [
   {
     period: "2024-present",
@@ -136,6 +145,7 @@ export const professionalExperiences: ProfessionalExperience[] = [
   },
 ];
 
+// Past projects provide detailed context for the About page cards and optional repository links.
 export const pastProjects: PastProject[] = [
   {
     title: "Simpl.",
@@ -200,8 +210,7 @@ export const pastProjects: PastProject[] = [
   },
 ];
 
-// Chaque objet alimente les composants de cartes (page d'accueil + page projets).
-// Donnees des cartes projets reutilisees sur l'accueil (extrait) et la page projets (liste complete).
+// Project roadmap cards are reused on the home page preview and the full projects page.
 export const projects: ProjectCard[] = [
   {
     title: "Application web full stack PWA",

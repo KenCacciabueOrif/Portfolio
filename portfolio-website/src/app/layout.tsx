@@ -1,5 +1,8 @@
-// Purpose: Layout racine App Router; applique polices, structure globale et metadata par defaut.
-// Exports: `metadata` (base SEO globale) et `RootLayout` (enveloppe commune de toutes les routes).
+/**
+ * Last updated: 2026-04-21
+ * Changes: Added a maintenance header and converted layout comments to English.
+ * Purpose: Define the shared App Router shell, default metadata, and global navigation structure.
+ */
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Link from "next/link";
@@ -8,13 +11,13 @@ import { NavLinks } from "@/src/components/navigation/nav-links";
 import { createPageMetadata, siteUrl } from "@/src/config/seo";
 import { siteMetadata } from "@/src/content/copy";
 
-// Charge les polices Google et expose des variables CSS reutilisables dans toute l'app.
+// The font loader exposes a CSS variable that the global stylesheet can reuse.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-// Metadonnees globales appliquees a toutes les pages (titre + description SEO).
+// Default metadata applies to every page before route-specific overrides are merged in.
 export const metadata: Metadata = {
   ...createPageMetadata({
     title: siteMetadata.defaultTitle,
@@ -23,26 +26,26 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 };
 
-// Root layout partage la meme structure (header/main/footer) a toutes les pages App Router.
+// The root layout keeps the same header, main width, and footer across all routes.
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    // Layout racine App Router: enveloppe commune de toutes les routes.
+    // The html element carries language and font variables for the whole application.
     <html
       lang="fr"
       className={`${geistSans.variable} h-full`}
     >
-      {/* Le body utilise flex colonne pour permettre aux pages de prendre toute la hauteur. */}
+      {/* A column flex shell lets the main content stretch while the footer stays at the bottom. */}
       <body className="site-shell min-h-full flex flex-col">
         <header className="top-nav-wrap">
           <div className="top-nav">
             <Link href="/" className="brand-mark">
               KC
             </Link>
-            {/* NavLinks est un composant client qui detecte la route active. */}
+            {/* NavLinks runs on the client so it can expose the active route state. */}
             <NavLinks />
           </div>
         </header>
