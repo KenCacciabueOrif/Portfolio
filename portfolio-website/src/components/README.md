@@ -1,6 +1,10 @@
 # Components Domains
 
-- `navigation/`: composants de navigation globale (menus, breadcrumbs, liens actifs)
-- `projects/`: composants lies aux projets (cards, badges, listes)
-- `sections/`: composants de section de page (hero, about block, contact block)
-- `ui/`: briques generiques et reutilisables (button, badge, panel)
+- [navigation/README.md](navigation/README.md): composants de navigation globale.
+- [projects/README.md](projects/README.md): composants lies aux projets.
+- [theme/README.md](theme/README.md): composants ou utilitaires de theme.
+
+## Notes
+
+- Les dossiers `sections/` et `ui/` ne sont pas presents dans l'etat actuel du projet.
+- Mettre ce README a jour si de nouveaux domaines de composants sont ajoutes.

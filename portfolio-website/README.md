@@ -4,7 +4,7 @@
 Ce README couvre uniquement l'application web dans ce dossier: architecture, lancement local, scripts, build et deploiement.
 
 Pour la vision produit et la roadmap globale du portfolio, voir:
-`../README.md`
+[../README.md](../README.md)
 
 ## Stack
 
@@ -16,17 +16,18 @@ Pour la vision produit et la roadmap globale du portfolio, voir:
 
 ## Architecture
 
-Le code source est isole dans `src/`.
+Le code source est isole dans [src/README.md](src/README.md).
 
-- `src/app/`: routes App Router Next.js (pages, layout, metadata routes)
-- `src/components/`: composants React classes par domaines
-- `src/content/`: contenu statique et constantes metier (textes, liens, donnees)
-- `src/config/`: configuration partagee (SEO, utilitaires applicatifs)
+- [src/app/README.md](src/app/README.md): routes App Router Next.js (pages, layout, metadata routes)
+- [src/components/README.md](src/components/README.md): composants React classes par domaines
+- [src/content/README.md](src/content/README.md): contenu statique et constantes metier (textes, liens, donnees)
+- [src/config/README.md](src/config/README.md): configuration partagee (SEO, utilitaires applicatifs)
 
 Les artefacts et dependances restent hors logique produit:
 
 - `node_modules/` et `.next/` sont generes et ignores par Git
 - la racine contient uniquement configuration/outillage
+- [public/README.md](public/README.md): assets statiques servis directement
 
 ## Convention de nommage et placement
 
@@ -100,6 +101,7 @@ npm run start
 - Garder les dependances a jour
 - Ajouter les nouveaux composants dans les dossiers de domaine adequats
 - Eviter les contenus en dur dans les pages, preferer `src/content/`
+- Mettre a jour les README des sous-dossiers quand l'architecture change
 
 ## Auteur
 
