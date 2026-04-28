@@ -1,6 +1,6 @@
 /**
- * Last updated: 2026-04-21
- * Changes: Added featured past projects for the home page and restored French accents in the shared content.
+ * Last updated: 2026-04-28
+ * Changes: Added Simpl project links (website and GitHub) in past projects content.
  * Purpose: Provide the single source of truth for navigation, profile data, contact data, and project content.
  */
 
@@ -155,6 +155,16 @@ export const pastProjects: PastProject[] = [
     contribution:
       "Développement de l'application full stack, structuration technique et déploiement.",
     stack: "Next.js, TypeScript, PostgreSQL, Prisma, Vercel, Git",
+    links: [
+      {
+        label: "website",
+        href: "https://simpl-next.vercel.app/",
+      },
+      {
+        label: "github",
+        href: "https://github.com/KenCacciabueOrif/SimplNext",
+      },
+    ],
   },
   {
     title: "Template d'API + API d'authentification",

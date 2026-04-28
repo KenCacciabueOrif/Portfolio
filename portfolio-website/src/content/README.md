@@ -1,5 +1,5 @@
-> Last updated: 2026-04-21
-> Changes: Documented the featured past-project selection used by the home page and refreshed the content responsibilities.
+> Last updated: 2026-04-28
+> Changes: Added traceability for Simpl website and GitHub links in the shared past-project content.
 
 # Portfolio Website Content
 
